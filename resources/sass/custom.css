@@ -1,0 +1,1361 @@
+:root{
+  --sinapsis-color : #35804f;
+  --sinapsis-color-light : #e4ffe5;
+  --sinapsis-color-select : #9cd6b1; 
+
+  
+}
+.verticaltext{
+  width:1px;
+  word-wrap: break-word;
+  white-space:pre-wrap; 
+}
+.invalid{
+  border-color: #dc3545 !important;
+}
+body *::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+body *::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+body *::-webkit-scrollbar {
+    width: 0.5em;
+}
+ 
+body *::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 5px;
+  outline: 1px solid slategrey;
+}
+.ref {
+  display: none;
+}
+.addref .ref{
+  display: initial;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: var(--sinapsis-color-light);
+  color: #4a4a4a;
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.input-50{
+  width: 50px;
+  outline: none;
+  border:none;
+}
+.fs-11{
+    font-size: 3rem !important;
+}
+.input-ct{
+  border: none;
+  width: 165px;
+  outline: none;
+}
+.carrito-icon::before{
+  content: "f2";
+}
+.bg-select{
+  background-color: #f2f2f2 !important;
+}
+.W-100{
+  widows: 100px !important;
+}
+.tabla-facturacion{
+  table-layout: fixed;
+  width: 100%;
+
+}
+.table-phone{
+  display: none;
+}
+
+td,th{
+  padding: 4px;
+}
+.sin-overflow-x{
+  overflow-x: hidden;
+}
+
+
+.cell1{
+  width: 10% !important;
+}
+.cell15{
+  width: 15% !important;
+}
+.cell05{
+  width: 5% !important;
+}
+
+.cell2{
+  width: 20% !important;
+}
+.cell25{
+  width: 25% !important;
+}
+.cell3{
+  width: 30% !important;
+}
+.cell4{
+  width: 40% !important;
+}
+.cell45 {
+  width: 45% !important;
+}
+.cell5{
+  width: 50% !important;
+}
+.cell6{
+  width: 60% !important;
+}
+.cell75{
+  width: 75% !important;
+}
+.cell8{
+  width: 80% !important;
+}
+.cell9 {
+  width: 90% !important;
+}
+.h-600{
+  height: 900px !important;
+  overflow-y: auto;
+}
+.cargando{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99999999;
+}
+.logo{
+  width:  90px;
+}
+.shadow-card{
+  box-shadow: 5px 10px 40px -20px rgba(0,0,0,1);
+}
+.w125px{
+  width: 165px;
+}
+.scale05{
+  scale: 0.5;
+}
+.card-pedidos{
+  width: 100%;
+  min-width: 48px;
+  box-shadow: 2px 2px 2px -1px #e3e3e2;
+  padding: 3px;
+  border-radius: 4px;
+  border: solid #cbcbcb 1px;
+  margin-bottom: 5px;
+  display: flex;
+  cursor: pointer;
+}
+/* El número del pedido manda el ancho de la barra: nunca se parte ni se sale. */
+.num-pedido{
+  display: block;
+  width: 100%;
+  padding: 2px 5px;
+  font-size: .95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.fs-10px{
+ font-size: 10px !important;
+}
+.modalpresupuesto{
+  background-color: white;
+  box-shadow: 6px 5px 26px -1px #0d0d0c;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid darkgray 2px;
+  /* width: 500px;
+  height: 500px;
+  top: 200px;
+  right: 0px;
+  z-index: 99999;
+  position: fixed; */
+  overflow-y: auto;
+}
+.modalchangepedido{
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid darkgray 2px;
+  width: 200px;
+  z-index: 99999;
+  position: absolute;
+  overflow-y: auto;
+}
+.modalmovil{
+  background-color: white;
+  box-shadow: 6px 5px 26px -1px #0d0d0c;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid darkgray 2px;
+  width: 1000px;
+  height: 500px;
+  z-index: 99999;
+  position: absolute;
+  overflow-y: auto;
+}
+.pb-table2 td {
+  padding-bottom: 50px !important;
+}
+.modalmovil-sm{
+  background-color: white;
+  box-shadow: 6px 5px 26px -1px #0d0d0c;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid darkgray 2px;
+  z-index: 99999;
+  position: absolute;
+  overflow-y: auto;
+}
+.card-pedidos-header{
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 12px;
+  display: flex;
+}
+.btn-options{
+  width: 50px;
+}
+.btn-sm-sm{
+  padding: 0.25rem 0.5rem !important; 
+  font-size: 0.587rem !important;
+  border-radius: 0.2rem !important;
+}
+
+.id_factura{
+ display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #777;
+  border-radius: 10px;
+}
+.closeModal{
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+.notificacion{
+  z-index: 9999999;
+  margin-bottom: 1em;
+  position: fixed;
+  
+  background: var(--sinapsis-color) !important;
+  box-shadow: 0px 10px 8px #e0e0e0;
+  background-clip: border-box;
+  border: 1px solid #000;
+  border-radius: 0.35rem;
+  box-shadow: 1px 8px 13px -14px black;
+  color: #fff;
+  bottom: 5px;
+  left: 5px;
+  max-width: 500px;
+  font-size: 1em;
+  padding: 5px;
+  font-style: initial;
+  box-shadow: 2px 4px 21px #060606;
+
+  max-width: 700px;
+  max-height: 700px;
+
+  overflow: auto;
+}
+.select-fact{
+  padding: 5px;
+  border-radius: 4px;
+  box-shadow: 0px 10px 8px #e0e0e0;
+  color: gray !important;
+  
+}
+.pointer{
+  cursor: pointer;
+}
+.pointer:hover{
+  opacity: 0.7;
+}
+.clickme{
+      font-style: italic;
+    font-weight: 900;
+    color: forestgreen;
+}
+i{
+  cursor: pointer;
+}
+.card-sinapsis{
+  background: antiquewhite !important;
+}
+
+.t-5{
+  opacity: 0.7 !important;
+  transform: scale(0.8) !important;
+}
+.zoom-11{
+  transform: scale(1.1);
+}
+.btn-circle.btn-sm {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    font-size: 8px;
+    text-align: center;
+}
+.btn-circle.btn-md {
+    width: 50px;
+    height: 50px;
+    padding: 7px 10px;
+    border-radius: 25px;
+    font-size: 10px;
+    text-align: center;
+}
+.btn-circle.btn-xl {
+    width: 80px;
+    height: 80px;
+    padding: 10px 16px;
+    border-radius: 40px;
+    font-size: 12px;
+    text-align: center;
+}
+.pago-numero input{
+  border-width: 0;
+  width: 100%;
+  border: none;
+  /*font-style: bold;
+  font-weight: bold;
+  font-size: x-large;*/
+}
+.w-30{
+  width: 30% !important;
+}
+.w-20{
+  width: 23% !important;
+}
+.w-10{
+  width: 10% !important;
+}
+.input_clean{
+  outline: none;
+  border: 0;
+  background-color: none;
+}
+/*Global*/
+
+html, body {
+  font-family: 'Nunito', sans-serif;
+  
+}
+
+body{
+  overflow-y: scroll !important;
+  
+}
+
+.user{
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.sucursal{
+  font-size: 0.7em;
+
+}
+.avatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+.text-right{
+  text-align: right;
+}
+.monto-header {
+    color: rgb(249, 212, 185);
+}
+.card-success-pago{
+   margin-bottom: 1em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #7fffd42e !important;
+  background-clip: border-box;
+  border: 1px solid #bf9770;
+  border-radius: 0.35rem;
+  box-shadow: 1px 8px 13px -14px black;
+  color: #00000085;
+}
+.card-danger-pago{
+   margin-bottom: 1em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #b2222242 !important;
+  background-clip: border-box;
+  border: 1px solid #bf9770;
+  border-radius: 0.35rem;
+  box-shadow: 1px 8px 13px -14px black;
+  color: #00000085;
+
+}
+.card-sinapsis{
+  margin-bottom: 1em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #00000003;
+  background-clip: border-box;
+  border: 1px solid #bf9770;
+  border-radius: 0.35rem;
+  box-shadow: 1px 8px 13px -14px black;
+  color: #00000085;
+}
+.card-sinapsis .descripcion{
+  font-size: 1em;
+  font-weight: bold;
+}
+.btn-outline-sinapsis{
+  color: var(--sinapsis-color) !important;
+  border-color: var(--sinapsis-color) !important;
+}
+.card-sinapsis .categoria{
+  font-size: 0.8em;
+  margin-left: 5px;
+}
+
+.card-sinapsis .suma{
+  font-size: 1.2em;
+  font-weight: bold;
+
+}
+.card-sinapsis .total{
+  font-size: 1.5em;
+  font-weight: bold;
+
+}
+.card-sinapsis .cantidad{
+  font-size: 1.3em;
+  font-weight: bold;
+
+}
+.card-sinapsis .pu{
+  font-size: 1.3em;
+  font-weight: bold;
+
+}
+.tag>.tag-num{
+  margin-left: 4px;
+  padding: 1px;
+  background-color: #f3ece3 ;
+  border-radius: 2px;
+}
+.tag{
+  padding: 5px;
+  border-radius: 5px;
+  border-color: var(--sinapsis-color-select);
+  background-color: #f3b660 ;
+}
+.App {
+  text-align: center;
+}
+.bg-sinapsis{
+  background-color: var(--sinapsis-color) !important;
+  color: #fff !important;
+  text-shadow: 0 0 black;
+
+}
+
+.bg-sinapsis-light{
+  background-color: var(--sinapsis-color-light) !important;
+  text-shadow: 0 0 black;
+}
+.bg-success-light{
+  background-color: #e0fdde !important;
+  text-shadow: 0 0 black;
+}
+.bg-danger-light {
+  background-color: #ffd3d3 !important;
+  text-shadow: 0 0 black;
+}
+
+.bg-success-super-light{
+  background-color: #eaf7ea !important;
+  text-shadow: 0 0 black;
+}
+.bg-danger-super-light {
+  background-color: #f8e2e2 !important;
+  text-shadow: 0 0 black;
+}
+
+
+.bg-secondary-light {
+  background-color: #dae2ea !important;
+  text-shadow: 0 0 black;
+}
+.bg-warning-light {
+  background-color: #fff8bc !important;
+  text-shadow: 0 0 black;
+}
+
+
+
+
+    
+
+    
+
+.text-sinapsis{
+  color: var(--sinapsis-color) !important;
+
+}
+.bg-sinapsis-select{
+  background-color: var(--sinapsis-color-select) !important;
+
+}
+.btn-sinapsis{
+  color: white !important;
+  background-color: var(--sinapsis-color) !important;
+
+}
+.btn-sinapsis-border{
+  color: var(--sinapsis-color) !important;
+  background-color: white !important;
+  border-color: var(--sinapsis-color) !important;
+
+}
+.borderbottom{
+  border-bottom: 5pt solid black;
+}
+.btn-hacer-pedido{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 9999;
+  margin:0;
+}
+
+.app-logo {
+  margin: 7px;
+  height: 10vmin;
+  pointer-events: none;
+}
+
+
+.app-body{
+  padding-top: 1em;
+}
+
+.font-size-12{
+  font-size: 12px;
+}
+
+.login{
+  width: 100%;
+  /* 100vh en vez de height:100%: ni html, ni body, ni #app tienen altura,
+     asi que el 100% colapsaba y el formulario quedaba pegado arriba. */
+  min-height: 100vh;
+  padding: 24px 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.wraper-panel-pre-inscripcion{
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+.header-register{
+  font-size: 2em;
+  font-weight:bolder;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  box-shadow: 5px 5px 5px #adb5bd;
+  margin-bottom: 60px; 
+}
+.header-register-logo img{
+  height: 150px;
+}
+
+.panel-pre-inscripcion{
+  width: auto;
+  border-radius: 10px;
+
+  padding: 55px 55px 37px 55px;
+  
+ 
+  box-shadow: 0px 10px 8px #e0e0e0;
+}
+.container-login100 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 15px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;  
+}
+
+.container-login100::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255,0.9);
+}
+
+.wrap-login100 {
+  width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 55px 55px 37px 55px;
+
+  
+ 
+  background: linear-gradient(180deg,var(--sinapsis-color-light),var(--sinapsis-color) 12%,rgba(255,255,255,0) 85%)
+}
+
+
+/*------------------------------------------------------------------
+[ Form ]*/
+
+.login100-form {
+  width: 100%;
+}
+.login100-form-logo{
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.login100-form-logo img{
+  
+  
+  height: 220px;
+ 
+}
+
+.login100-form-title {
+  font-size: 30px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+
+  display: block;
+}
+
+
+/*------------------------------------------------------------------
+[ Input ]*/
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid rgba(255,255,255,0.24);
+  margin-bottom: 30px;
+}
+
+.input100 {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+
+  display: block;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  padding: 0 5px 0 38px;
+}
+
+/*---------------------------------------------*/ 
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input100::before {
+  font-family: Material-Design-Iconic-Font;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+
+  background: #fff;
+}
+
+.focus-input100::after {
+  font-family: Material-Design-Iconic-Font;
+  font-size: 22px;
+  color: #fff;
+
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 6px;
+  left: 0px;
+  padding-left: 5px;
+
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input100:focus {
+  padding-left: 5px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.input100:focus + .focus-input100::after {
+  top: -22px;
+  font-size: 18px;
+}
+
+.input100:focus + .focus-input100::before {
+  width: 100%;
+}
+
+.has-val.input100 + .focus-input100::after {
+  top: -22px;
+  font-size: 18px;
+}
+
+.has-val.input100 + .focus-input100::before {
+  width: 100%;
+}
+
+.has-val.input100 {
+  padding-left: 5px;
+}
+
+
+/*==================================================================
+[ Restyle Checkbox ]*/
+
+.contact100-form-checkbox {
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 35px;
+}
+
+.input-checkbox100 {
+  display: none;
+}
+
+.label-checkbox100 {
+  font-size: 13px;
+  color: #fff;
+  line-height: 1.2;
+
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+}
+
+.label-checkbox100::before {
+  content: "\F26B";
+  font-size: 13px;
+  color: transparent;
+
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background: #fff;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.input-checkbox100:checked + .label-checkbox100::before {
+  color: #555555;
+}
+
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-login100-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.login100-form-btn {
+  border: none;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.2;
+
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 0 20px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 25px;
+
+  
+ 
+  background: linear-gradient(0deg, var(--sinapsis-color) 0%, var(--sinapsis-color-select) 22%, rgba(255,255,255,0) 100%);
+
+  position: relative;
+  z-index: 1;
+
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  opacity: 1;
+
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+  color: #fff;
+}
+
+.login100-form-btn:hover:before {
+  opacity: 0;
+}
+
+
+
+.header-justify-content-end{
+  justify-content: flex-end !important;
+  
+}
+
+.hover:hover{
+  background-color: #eaeaea !important;
+
+}
+
+
+/* ---------- Lista de productos (mismo lenguaje que la tabla de Pagar) ---------- */
+.tabla-facturacion > thead > tr > th{
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: #fff;
+  border-bottom: 2px solid var(--sinapsis-color);
+  padding: 8px 6px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.tabla-facturacion > tbody > tr > td{
+  padding: 6px;
+}
+
+/* La fila seleccionada y el hover deben ganarle al rayado de Bootstrap,
+   que pinta las celdas con un box-shadow interno. */
+.tabla-facturacion > tbody > tr.bg-sinapsis-light > *{
+  --bs-table-accent-bg: transparent;
+  box-shadow: none;
+  background-color: var(--sinapsis-color-light) !important;
+}
+.tabla-facturacion > tbody > tr.hover:hover > *{
+  --bs-table-accent-bg: transparent;
+  box-shadow: none;
+  background-color: #eaeaea !important;
+}
+
+.cod-producto{
+  font-size: .82rem;
+  line-height: 1.3;
+  color: #6c757d;
+  word-break: break-word;
+}
+.unidad-producto{
+  font-size: .85rem;
+  color: #6c757d;
+  text-transform: uppercase;
+}
+
+/* Disponible: antes usaba w-50 y las cantidades grandes se salían del botón */
+.btn-disp{
+  display: block;
+  width: 100%;
+  padding: 4px 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Precio en divisa como ancla; Bs. y Cop. de apoyo, sin competir con él */
+.precio-producto .btn{
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.precio-producto .btn-secondary{
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #6c757d !important;
+  font-size: .85rem;
+  padding: 1px 6px;
+  text-align: right;
+  box-shadow: none !important;
+}
+
+/* ---------- Barra superior en una sola línea ---------- */
+.header-bar{
+  padding: 0 10px;
+  border-radius: 6px;
+  /* Sin overflow: el overflow-x recortaba el desplegable de Clientes, que se
+     abre hacia abajo. En pantallas angostas la barra pasa a dos líneas
+     (media query más abajo) en vez de recortar el menú. */
+  overflow: visible;
+  position: relative;
+  z-index: 20;
+}
+.header-bar > .d-flex{
+  min-height: 44px;
+  gap: 2px;
+}
+.header-logo{
+  height: 34px;
+  width: auto;
+  flex: 0 0 auto;
+}
+.header-sucursal{
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin: 0 6px 0 4px;
+  max-width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 0 0 auto;
+}
+.header-carrito{
+  height: 24px;
+  margin: 0 12px 0 4px;
+  width: auto;
+  flex: 0 0 auto;
+  filter: brightness(0) invert(1);
+}
+.header-sep{
+  width: 1px;
+  align-self: stretch;
+  margin: 8px 6px;
+  background: rgba(255,255,255,.25);
+  flex: 0 0 auto;
+}
+.header-item{
+  display: inline-block;
+  padding: 5px 6px;
+  color: #fff;
+  font-size: .88rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.header-item:hover{
+  background: rgba(0,0,0,.2);
+}
+.header-item.activo{
+  background: #1d1d1d;
+  color: #fff;
+}
+.header-tasa{
+  padding: 5px 6px;
+  color: rgb(249, 212, 185);
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 4px;
+  flex: 0 0 auto;
+}
+.header-tasa:hover{
+  background: rgba(0,0,0,.2);
+}
+.header-derecha{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  padding-left: 8px;
+}
+.header-user{
+  color: #fff;
+  font-size: .82rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  max-width: 165px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.header-icon{
+  padding: 4px 8px;
+  color: #fff;
+  cursor: pointer;
+}
+.header-icon.text-danger{
+  color: #ffb3b3 !important;
+}
+.header-bar .dropdown{
+  flex: 0 0 auto;
+}
+.header-bar .dropdown-menu{
+  z-index: 1200;
+  margin-top: 2px;
+}
+@media (max-width: 1199.98px){
+  .header-bar > .d-flex{
+    flex-wrap: wrap !important;
+  }
+}
+
+/* ---------- Totales del pedido ---------- */
+.totales-pedido{
+  border: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+.totales-desglose{
+  display: flex;
+  flex-wrap: nowrap;
+  background: transparent;
+  border-bottom: 1px solid #f1f3f5;
+}
+.totales-desglose > span{
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 4px 6px;
+  text-align: center;
+  line-height: 1.15;
+}
+.totales-desglose small{
+  display: block;
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: #8a929b;
+  white-space: nowrap;
+}
+.totales-desglose b{
+  font-size: .95rem;
+  color: #3f4a56;
+  font-variant-numeric: tabular-nums;
+}
+.totales-monto{
+  display: flex;
+  align-items: stretch;
+}
+.totales-monto > div{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 10px;
+}
+.totales-monto .tot-principal{
+  flex: 1 1 0;
+}
+.totales-monto .tot-secundario{
+  flex: 0 0 auto;
+}
+.totales-monto small{
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: #8a929b;
+  white-space: nowrap;
+}
+.valor-dolar{
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--sinapsis-color);
+  font-variant-numeric: tabular-nums;
+}
+.valor-bs{
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #3f4a56;
+  font-variant-numeric: tabular-nums;
+}
+.totales-monto .tot-secundario span{
+  font-size: 1rem;
+  color: #6c757d;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Métodos de pago ---------- */
+.metodos-pago-wrap{
+  padding: 4px 0 8px;
+}
+/* Interruptor del autocorrector: hace falta, pero no debe robar espacio. */
+/* Va dentro de la rejilla, pegado a Vuelto, pero sin ocupar una celda entera. */
+.btn-auto{
+  justify-self: start;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  padding: 4px 5px;
+  border: 0;
+  border-radius: 4px;
+  background: #fff;
+  color: #adb5bd;
+  font-size: .58rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+.btn-auto b{
+  font-size: .7rem;
+}
+.btn-auto.activo{
+  color: var(--sinapsis-color);
+  background: var(--sinapsis-color-light);
+}
+.metodos-pago{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(132px, 1fr));
+  gap: 8px;
+  align-items: stretch;
+}
+.pago-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 8px;
+  border: 0;
+  border-radius: 6px;
+  background: #fff;
+}
+.pago-card.activo{
+  background: var(--sinapsis-color-light);
+}
+.pago-titulo{
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: #6c757d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pago-card.activo .pago-titulo{
+  color: var(--sinapsis-color);
+}
+.pago-input .form-control{
+  border-color: transparent;
+  background: #f4f6f8;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: right;
+  padding: 4px 8px;
+  font-variant-numeric: tabular-nums;
+}
+.pago-input .input-group-text{
+  padding: 4px 8px;
+  font-size: .8rem;
+  border-color: transparent;
+  background: #e9edf1;
+  color: #6c757d;
+}
+.pago-input .form-control:focus{
+  background: #fff;
+  border-color: var(--sinapsis-color);
+  box-shadow: none;
+}
+.pago-valor{
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: right;
+  padding: 4px 8px;
+  font-variant-numeric: tabular-nums;
+}
+.pago-equiv{
+  display: block;
+  min-height: 1rem;
+  font-size: .78rem;
+  text-align: right;
+  color: #8a929b;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Botones de acción del pedido ---------- */
+.acciones-pedido{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 0;
+}
+.btn-accion{
+  flex: 1 1 auto;
+  min-height: 42px;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: .92rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.btn-accion .tecla{
+  font-weight: 500;
+  font-size: .82rem;
+  opacity: .8;
+}
+/* Eliminar: acción destructiva, se deja discreta y sin ocupar espacio. */
+.btn-accion-min{
+  flex: 0 0 auto;
+  min-height: 0;
+  padding: 4px 9px;
+  font-size: .78rem;
+  align-self: center;
+}
+.btn-accion-min .tecla{
+  font-size: .7rem;
+}
+
+/* ---------- Login: formulario centrado, firma al pie ---------- */
+.login{
+  justify-content: flex-start;
+}
+.login-logo{
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+.login-logo img{
+  height: 120px;
+  width: auto;
+}
+/* Los dos margin-top:auto reparten el espacio libre: el formulario queda
+   centrado y la firma se pega al fondo. Sin la clase mt-4 de Bootstrap,
+   que lleva !important y anulaba el auto. */
+.login-firma{
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+/* ---------- Búsqueda de productos: skeleton e indicador ---------- */
+.input-group-text.spinner-busqueda{
+  color: var(--sinapsis-color);
+  font-size: .85rem;
+  gap: 6px;
+}
+.tabla-facturacion.cargando-lista > tbody{
+  opacity: .55;
+  transition: opacity .15s ease;
+}
+.fila-skeleton td{
+  padding: 10px 6px;
+}
+.skeleton{
+  display: inline-block;
+  height: 12px;
+  border-radius: 4px;
+  background: linear-gradient(90deg,#eceff2 25%,#f6f8fa 37%,#eceff2 63%);
+  background-size: 400% 100%;
+  animation: skeleton-brillo 1.2s ease-in-out infinite;
+}
+@keyframes skeleton-brillo{
+  0%   { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
