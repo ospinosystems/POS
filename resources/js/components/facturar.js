@@ -930,9 +930,10 @@ export default function Facturar({ user, notificar, setLoading }) {
             }
         },
         {
-            enableOnTags: ["INPUT", "SELECT"],
+            enableOnTags: ["INPUT", "SELECT", "TEXTAREA"],
         },
-        [view, selectItem]
+        // productosInventario y compañía: sin ellos F1 guardaba la lista vieja del inventario
+        [view, selectItem, subViewInventario, modViewInventario, productosInventario, factSelectIndex, facturas]
     );
     useHotkeys(
         "f2",
@@ -951,9 +952,10 @@ export default function Facturar({ user, notificar, setLoading }) {
             }
         },
         {
-            enableOnTags: ["INPUT", "SELECT"],
+            enableOnTags: ["INPUT", "SELECT", "TEXTAREA"],
         },
-        [view]
+        // Sin productosInventario, cada F2 partía de la lista vieja y perdía las filas ya agregadas
+        [view, subViewInventario, modViewInventario, productosInventario, factSelectIndex, facturas]
     );
     useHotkeys(
         "f5",
@@ -4751,8 +4753,8 @@ export default function Facturar({ user, notificar, setLoading }) {
     };
     
     const guardarNuevoProductoLote = (e) => {
-        if (!user.iscentral) {
-            alert("No tiene permisos para gestionar Inventario")
+        if (!auth(1)) {
+            alert("Solo un administrador puede gestionar el inventario")
             return;
 
         }
@@ -5146,7 +5148,7 @@ export default function Facturar({ user, notificar, setLoading }) {
             />
             {view=="tareas"?
                 <div className="container">
-                    <h1>Tareas <button className="btn btn-outline-success" onClick={getTareasLocal}><i className="fa fa-search"></i></button></h1>
+                    <h1>Tareas <button className="btn btn-outline-brand" onClick={getTareasLocal}><i className="fa fa-search"></i></button></h1>
                     <input type="date" className="form-control" value={tareasinputfecha} onChange={e=>settareasinputfecha(e.target.value)} />
                     <table className="table">
                         <thead>
@@ -5173,7 +5175,7 @@ export default function Facturar({ user, notificar, setLoading }) {
                                         <td>{e.created_at}</td>
                                         <td>
                                             {e.estado?
-                                                <button className="btn btn-success">Resuelta</button>
+                                                <button className="btn btn-brand">Resuelta</button>
                                             :
                                                 <button className="btn btn-warning" onClick={()=>resolverTareaLocal(e.id)}>Resolver</button>
                                             }
@@ -5224,7 +5226,7 @@ export default function Facturar({ user, notificar, setLoading }) {
                                     placeholder="Buscar... Presiona (ESC)"
                                     onChange={(e) => getProductos(e.target.value)}
                                 />
-                                {/*<button onClick={()=>setshowinputaddCarritoFast(!showinputaddCarritoFast)} className={("btn btn-outline-")+(showinputaddCarritoFast?"success":"sinapsis")}>Agg. rápido</button>*/}
+                                {/*<button onClick={()=>setshowinputaddCarritoFast(!showinputaddCarritoFast)} className={("btn btn-outline-")+(showinputaddCarritoFast?"success":"brand")}>Agg. rápido</button>*/}
                                 {buscandoProductos?
                                     <span className="input-group-text spinner-busqueda" title="Buscando productos...">
                                         <i className="fa fa-spinner fa-spin"></i> Buscando
@@ -5326,7 +5328,7 @@ export default function Facturar({ user, notificar, setLoading }) {
                                                 <td className="text-right">
                                                 
                                                     <button className="btn btn-warning" onClick={()=>toggleImprimirTicket("presupuesto")}><i className="fa fa-print"></i></button>
-                                                    <button className="btn btn-outline-success" onClick={setpresupuestocarritotopedido}><i className="fa fa-save"></i></button>
+                                                    <button className="btn btn-outline-brand" onClick={setpresupuestocarritotopedido}><i className="fa fa-save"></i></button>
                                                 </td>
                                             </tr>
                                         </tbody>

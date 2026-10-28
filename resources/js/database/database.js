@@ -7,7 +7,7 @@ import axios from 'axios';
 
 
 const host = ""
-// const host = "http://localhost/sinapsisapp"
+// const host = "http://localhost/pos"
 
 const db = {
   // setCentralData: data=>axios.get(host+"setCentralData",{params:data}),

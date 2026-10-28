@@ -184,11 +184,6 @@
                 </tr>
                 <tr>
 					<td colspan="">
-						@if (isset($message))
-							<img src="{{$message->embed('images/logo.png')}}" width="200px" class="img">
-						@else
-							<img src="{{asset('images/logo.png')}}" width="200px" class="img">
-						@endif
 						<h5>{{$sucursal->nombre_registro}}</h5>
 						
 						<b>RIF. {{$sucursal->rif}}</b>

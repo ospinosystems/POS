@@ -155,7 +155,7 @@ export default function Panelcentrodeacopio({
                     <h6>
                         Cola de tareas{" "}
                         <button
-                            className="btn btn-outline-success btn-sm"
+                            className="btn btn-outline-brand btn-sm"
                             onClick={() => getTareasCentral([0, 1])}
                         >
                             {" "}
@@ -220,7 +220,7 @@ export default function Panelcentrodeacopio({
                 </div>
                 <div className="col-2">
                     <button
-                        className="btn btn-outline-success w-100 mb-1"
+                        className="btn btn-outline-brand w-100 mb-1"
                         onClick={getSucursales}
                     >
                         Buscar Sucursales
@@ -255,7 +255,7 @@ export default function Panelcentrodeacopio({
                         <>
                             <div className="btn-group">
                                 <button
-                                    className="btn btn-outline-success mb-1"
+                                    className="btn btn-outline-brand mb-1"
                                     onClick={() =>
                                         setsubviewpanelcentroacopio(
                                             "inventarioSucursalFromCentral"
@@ -265,7 +265,7 @@ export default function Panelcentrodeacopio({
                                     Inventario
                                 </button>
                                 <button
-                                    className="btn btn-outline-success mb-1"
+                                    className="btn btn-outline-brand mb-1"
                                     onClick={() =>
                                         setsubviewpanelcentroacopio(
                                             "fallaspanelcentroacopio"
@@ -275,7 +275,7 @@ export default function Panelcentrodeacopio({
                                     Fallas
                                 </button>
                                 <button
-                                    className="btn btn-outline-success mb-1"
+                                    className="btn btn-outline-brand mb-1"
                                     onClick={() =>
                                         setsubviewpanelcentroacopio(
                                             "estadisticaspanelcentroacopio"
@@ -285,7 +285,7 @@ export default function Panelcentrodeacopio({
                                     Estadísticas
                                 </button>
                                 <button
-                                    className="btn btn-outline-success mb-1"
+                                    className="btn btn-outline-brand mb-1"
                                     onClick={() =>
                                         setsubviewpanelcentroacopio(
                                             "gastospanelcentroacopio"
@@ -295,7 +295,7 @@ export default function Panelcentrodeacopio({
                                     Gastos
                                 </button>
                                 <button
-                                    className="btn btn-outline-success mb-1"
+                                    className="btn btn-outline-brand mb-1"
                                     onClick={() =>
                                         setsubviewpanelcentroacopio(
                                             "cierrespanelcentroacopio"
@@ -306,7 +306,7 @@ export default function Panelcentrodeacopio({
                                 </button>
 
                                 <button
-                                    className="btn btn-outline-success mb-1"
+                                    className="btn btn-outline-brand mb-1"
                                     onClick={() =>
                                         setsubviewpanelcentroacopio(
                                             "diadeventapanelcentroacopio"
@@ -316,7 +316,7 @@ export default function Panelcentrodeacopio({
                                     Día de Venta
                                 </button>
                                 <button
-                                    className="btn btn-outline-success mb-1"
+                                    className="btn btn-outline-brand mb-1"
                                     onClick={() =>
                                         setsubviewpanelcentroacopio(
                                             "tasaventapanelcentroacopio"
@@ -335,7 +335,7 @@ export default function Panelcentrodeacopio({
                                         {puedoconsultarproductosinsucursalfromcentral() ? (
                                             <>
                                                 <button
-                                                    className="btn btn-outline-success"
+                                                    className="btn btn-outline-brand"
                                                     onClick={() =>
                                                         setInventarioSucursalFromCentral(
                                                             "inventarioSucursalFromCentral"
@@ -411,7 +411,7 @@ export default function Panelcentrodeacopio({
                                                 </select>
 
                                                 <button
-                                                    className="btn btn-outline-success"
+                                                    className="btn btn-outline-brand"
                                                     onClick={() =>
                                                         getInventarioSucursalFromCentral(
                                                             "inventarioSucursalFromCentral"
@@ -485,7 +485,7 @@ export default function Panelcentrodeacopio({
                                                             ID VINCULACIÓN
                                                         </span>
                                                         <br />
-                                                        <span>CENTRAL</span> <button className="btn btn-sm btn-success" onClick={() => autovincularSucursalCentral()}>Auto vincular(codigoBarras)</button>
+                                                        <span>CENTRAL</span> <button className="btn btn-sm btn-brand" onClick={() => autovincularSucursalCentral()}>Auto vincular(codigoBarras)</button>
                                                     </th>
                                                     <th className="cell1 pointer">
                                                         <span>C. Alterno</span>
@@ -519,7 +519,7 @@ export default function Panelcentrodeacopio({
                                                     </th>
                                                     <th className="cell1">
                                                         <button
-                                                            className="btn btn-success"
+                                                            className="btn btn-brand"
                                                             onClick={() =>
                                                                 changeInventarioFromSucursalCentral(
                                                                     null,
@@ -591,11 +591,11 @@ export default function Panelcentrodeacopio({
                                                                                                 No
                                                                                                 vinculado
                                                                                             </button>
-                                                                                            <button className="btn btn-outline-success btn-sm fs-10px" onClick={()=>guardarDeSucursalEnCentral(i, e.id ? e.id: null)}><i className="fa fa-save"></i></button>
+                                                                                            <button className="btn btn-outline-brand btn-sm fs-10px" onClick={()=>guardarDeSucursalEnCentral(i, e.id ? e.id: null)}><i className="fa fa-save"></i></button>
                                                                                         </>
                                                                                     ) : (
                                                                                         <button
-                                                                                            className="btn btn-outline-success"
+                                                                                            className="btn btn-outline-brand"
                                                                                             onClick={(
                                                                                                 event
                                                                                             ) =>
@@ -701,7 +701,7 @@ export default function Panelcentrodeacopio({
                                                                                     ) : (
                                                                                         <>
                                                                                             <button
-                                                                                                className="btn btn-outline-success"
+                                                                                                className="btn btn-outline-brand"
                                                                                                 onClick={(
                                                                                                     event
                                                                                                 ) =>
@@ -1319,7 +1319,7 @@ export default function Panelcentrodeacopio({
                                     <h1>
                                         Cierres{" "}
                                         <button
-                                            className="btn btn-outline-success btn-sm"
+                                            className="btn btn-outline-brand btn-sm"
                                             onClick={() =>
                                                 getInventarioSucursalFromCentral(
                                                     "cierrespanelcentroacopio"
@@ -1337,7 +1337,7 @@ export default function Panelcentrodeacopio({
                                     <h1>
                                         Gastos{" "}
                                         <button
-                                            className="btn btn-outline-success btn-sm"
+                                            className="btn btn-outline-brand btn-sm"
                                             onClick={() =>
                                                 getInventarioSucursalFromCentral(
                                                     "gastospanelcentroacopio"
@@ -1355,7 +1355,7 @@ export default function Panelcentrodeacopio({
                                     <h1>
                                         Estadísticas{" "}
                                         <button
-                                            className="btn btn-outline-success btn-sm"
+                                            className="btn btn-outline-brand btn-sm"
                                             onClick={() =>
                                                 getInventarioSucursalFromCentral(
                                                     "estadisticaspanelcentroacopio"
@@ -1373,7 +1373,7 @@ export default function Panelcentrodeacopio({
                                     <h1>
                                         Fallas{" "}
                                         <button
-                                            className="btn btn-outline-success btn-sm"
+                                            className="btn btn-outline-brand btn-sm"
                                             onClick={() =>
                                                 getInventarioSucursalFromCentral(
                                                     "fallaspanelcentroacopio"
@@ -1392,7 +1392,7 @@ export default function Panelcentrodeacopio({
                                     <h1>
                                         Día de Venta{" "}
                                         <button
-                                            className="btn btn-outline-success btn-sm"
+                                            className="btn btn-outline-brand btn-sm"
                                             onClick={() =>
                                                 getInventarioSucursalFromCentral(
                                                     "diadeventapanelcentroacopio"
@@ -1410,7 +1410,7 @@ export default function Panelcentrodeacopio({
                                     <h1>
                                         Tasas de Venta{" "}
                                         <button
-                                            className="btn btn-outline-success btn-sm"
+                                            className="btn btn-outline-brand btn-sm"
                                             onClick={() =>
                                                 getInventarioSucursalFromCentral(
                                                     "tasaventapanelcentroacopio"

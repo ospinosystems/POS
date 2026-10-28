@@ -6,9 +6,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="icon" type="image/png" href="{{ asset('images/icon.ico') }}">
-    {{-- <title>Sinapsis Facturación</title> --}}
-    <title>Facturación</title>
+    <title>{{ config('app.name', 'POS') }}</title>
 
     <script src="{{ asset('js/app.js') }}"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

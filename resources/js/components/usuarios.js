@@ -49,7 +49,7 @@ function Usuarios({
 			<div className="container">
 				<div className="row">
 					<div className="col">
-						<h1>Usuarios <button className="btn btn-sm btn-success" onClick={setNuevoProveedor}>Nuevo</button></h1>
+						<h1>Usuarios <button className="btn btn-sm btn-brand" onClick={setNuevoProveedor}>Nuevo</button></h1>
 
 						<div className="">
 							<div className="input-group ">
@@ -70,7 +70,7 @@ function Usuarios({
 										onClick={setIndexSelectUsuariosFun}
 										data-index={i}
 										key={e.id}
-										className={(indexSelectUsuarios == i ? "bg-sinapsis" : "bg-light text-secondary") + " card mt-2 pointer"}>
+										className={(indexSelectUsuarios == i ? "bg-brand" : "bg-light text-secondary") + " card mt-2 pointer"}>
 										<div className="card-header flex-row row justify-content-between">
 											<div>
 												<small>ID.{e.id}</small>
@@ -141,10 +141,10 @@ function Usuarios({
 							</div>
 							<div className="form-group mt-1">
 								{indexSelectUsuarios == null ?
-									<button className="btn btn-outline-success btn-block" type="submit">Guardar</button>
+									<button className="btn btn-outline-brand btn-block" type="submit">Guardar</button>
 									:
 									<div className="btn-group">
-										<button className="btn btn-sinapsis btn-block" type="submit">Editar</button>
+										<button className="btn btn-brand btn-block" type="submit">Editar</button>
 										<button className="btn btn-outline-danger btn-block" onClick={delUsuario} type="button"><i className="fa fa-times"></i></button>
 
 									</div>

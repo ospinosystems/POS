@@ -42,10 +42,10 @@ function Credito({
           <h3>Cuentas por cobrar</h3> 
         </div>
         <div className="col text-right">
-          <button className="btn btn-outline-success m-2" onClick={printCreditos}>
+          <button className="btn btn-outline-brand m-2" onClick={printCreditos}>
             <i className="fa fa-print"></i>
           </button>
-          <button className="btn btn-outline-success" onClick={()=>{
+          <button className="btn btn-outline-brand" onClick={()=>{
             let num = window.prompt("num")
 
             if (num) {
@@ -108,11 +108,11 @@ function Credito({
                           <h1 className="">{deudoresList[selectDeudor].nombre}</h1>
                         </div>:null}
                         {sumPedidosArr?
-                          sumPedidosArr.map(e=><button key={e} className="btn btn-outline-success" data-id={e} data-tipo="del" onClick={sumPedidos}>{e}</button>)
+                          sumPedidosArr.map(e=><button key={e} className="btn btn-outline-brand" data-id={e} data-tipo="del" onClick={sumPedidos}>{e}</button>)
                         :null}
                         {sumPedidosArr.length?
                           <a className="" target="_blank" href={"/sumpedidos?id="+sumPedidosArr}>
-                            <button className="btn btn-success">Emitir Factura.</button>
+                            <button className="btn btn-brand">Emitir Factura.</button>
                           </a>
                           :null}
                       </th>
@@ -171,7 +171,7 @@ function Credito({
                       <tr key={e.id}>
                         <td className="d-flex justify-content-between align-items-center">
                           {!sumPedidosArr.filter(id_save=>id_save==e.id).length?
-                            <button className="btn btn-outline-success" data-id={e.id} data-tipo="add" onClick={sumPedidos}>Select</button>
+                            <button className="btn btn-outline-brand" data-id={e.id} data-tipo="add" onClick={sumPedidos}>Select</button>
                             :
                           
                             <button className="btn btn-outline-danger" data-id={e.id} data-tipo="del" onClick={sumPedidos}>UnSelect</button>

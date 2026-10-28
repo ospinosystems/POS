@@ -52,7 +52,7 @@ export default function Modalmovil({
                 <tbody>
                 {productos.length?productos.map(e=>
                     <tr key={e.id} data-id={e.id} className="pointer align-middle">
-                        <td> <button className="btn btn-outline-success" onClick={()=>linkproductocentralsucursal(e.id)}><i className="fa fa-link fa-2x"></i> <br /> #{e.id}</button></td>
+                        <td> <button className="btn btn-outline-brand" onClick={()=>linkproductocentralsucursal(e.id)}><i className="fa fa-link fa-2x"></i> <br /> #{e.id}</button></td>
                         <td>{e.codigo_proveedor}</td>
                         <td>{e.codigo_barras}</td>
                         <td>{e.unidad}</td>

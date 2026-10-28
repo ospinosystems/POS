@@ -18,14 +18,14 @@ function Fallas({
 				<div className="d-flex justify-content-between align-items-center">
 					<h1>Fallas</h1> 
 					<div className="btn-group">
-						<button className={("btn ")+(orderCatFallas=="proveedor"?"btn-dark":"btn-outline-success")} onClick={()=>setorderCatFallas("proveedor")}>Por Proveedor</button>
-						<button className={("btn ")+(orderCatFallas=="categoria"?"btn-dark":"btn-outline-success")} onClick={()=>setorderCatFallas("categoria")}>Por Categoría</button>
+						<button className={("btn ")+(orderCatFallas=="proveedor"?"btn-dark":"btn-outline-brand")} onClick={()=>setorderCatFallas("proveedor")}>Por Proveedor</button>
+						<button className={("btn ")+(orderCatFallas=="categoria"?"btn-dark":"btn-outline-brand")} onClick={()=>setorderCatFallas("categoria")}>Por Categoría</button>
 					</div>
 					{/*<div className="d-flex text-right flex-column align-items-center">
 						<h4>Frecuencia</h4>
 						<div className="btn-group">
 							<button className={("btn ")+(orderSubCatFallas=="todos"?"btn-secondary":"btn-outline-secondary")} onClick={()=>setorderSubCatFallas("todos")}>Todos</button>
-							<button className={("btn ")+(orderSubCatFallas=="alta"?"btn-success":"btn-outline-success")} onClick={()=>setorderSubCatFallas("alta")}>Alta</button>
+							<button className={("btn ")+(orderSubCatFallas=="alta"?"btn-brand":"btn-outline-brand")} onClick={()=>setorderSubCatFallas("alta")}>Alta</button>
 							<button className={("btn ")+(orderSubCatFallas=="media"?"btn-warning":"btn-outline-warning")} onClick={()=>setorderSubCatFallas("media")}>Media</button>
 							<button className={("btn ")+(orderSubCatFallas=="baja"?"btn-danger":"btn-outline-danger")} onClick={()=>setorderSubCatFallas("baja")}>Baja</button>
 						</div>
@@ -37,7 +37,7 @@ function Fallas({
 					{fallas&&Object.entries(fallas)?
 							Object.entries(fallas).map((e,i)=>
 								<div className="m-3" key={i}>
-									<h3>{e[0]?e[0]:null} <button className="btn btn-outline-success" onClick={() => openReporteFalla(e[1] ? e[1][0] ? e[1][0].producto.id_proveedor:null:null)}><i className="fa fa-file"></i></button></h3>
+									<h3>{e[0]?e[0]:null} <button className="btn btn-outline-brand" onClick={() => openReporteFalla(e[1] ? e[1][0] ? e[1][0].producto.id_proveedor:null:null)}><i className="fa fa-file"></i></button></h3>
 									<table className="table m-3">
 										<thead>
 											<tr>

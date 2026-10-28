@@ -105,7 +105,7 @@ function ModaladdPersona({
                       className="form-control"/>
                   </div>
                 </div>
-                <button className="btn btn-success w-100 mt-2" type="button" onClick={setPersonaFast}>
+                <button className="btn btn-brand w-100 mt-2" type="button" onClick={setPersonaFast}>
                   Guardar y seleccionar (Enter)
                 </button>
               </div>

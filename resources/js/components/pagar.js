@@ -454,7 +454,7 @@ const syncPago = (val,type)=>{
                 {pedidosFast?pedidosFast.map(e=>
                   e?
                     <div className="card-pedidos" key={e.id} data-id={e.id} onClick={onClickEditPedido}>
-                      <span className={(e.id==id?"btn":"btn-outline")+(!e.estado?"-sinapsis":"-success")+(" btn num-pedido")}>
+                      <span className={(e.id==id?"btn":"btn-outline")+(!e.estado?"-brand":"-success")+(" btn num-pedido")}>
                         {e.id}
                       </span>
                     </div>
@@ -508,7 +508,7 @@ const syncPago = (val,type)=>{
                 clienteInptelefono={clienteInptelefono}
                 setclienteInptelefono={setclienteInptelefono}
               />}
-              <div className={(estado?"bg-success-light":"bg-sinapsis")+(" d-flex justify-content-between p-1 rounded")}>
+              <div className={(estado?"bg-success-light":"bg-brand")+(" d-flex justify-content-between p-1 rounded")}>
                 <span className='fs-5'>Pedido #{id}</span>
                 <span className='pull-right'>{created_at}</span>
               </div>
@@ -520,25 +520,25 @@ const syncPago = (val,type)=>{
                           <div className="input-group">
                             <input type="text" ref={refaddfast} className="form-control" placeholder="Auto agregar...(F1) y (F1)"/>
                               <div className="input-group-append">
-                                <button className="btn text-white btn-sinapsis" onClick={toggleModalProductos}><i className="fa fa-plus"></i></button>
+                                <button className="btn text-white btn-brand" onClick={toggleModalProductos}><i className="fa fa-plus"></i></button>
                               </div>
                           </div>
                         </td>
                     </tr>
                   :null}
                   <tr>
-                    <th className="text-sinapsis cell2">Código</th>
-                    <th className="text-sinapsis cell3">Producto</th>
-                    <th className="text-sinapsis cell1">Ct.</th>
-                    {auth(1)?<th className="text-sinapsis cell1">PBase</th>:null}
+                    <th className="text-brand cell2">Código</th>
+                    <th className="text-brand cell3">Producto</th>
+                    <th className="text-brand cell1">Ct.</th>
+                    {auth(1)?<th className="text-brand cell1">PBase</th>:null}
 
-                    <th className="text-sinapsis cell1">PVenta</th>
+                    <th className="text-brand cell1">PVenta</th>
                     
-                    <th className="text-sinapsis">SubTotal</th>
-                    <th className="text-sinapsis">Desc.%</th>
+                    <th className="text-brand">SubTotal</th>
+                    <th className="text-brand">Desc.%</th>
                     
 
-                    <th className="text-sinapsis cell2">Total</th>
+                    <th className="text-brand cell2">Total</th>
                     
                   </tr>
                 </thead>
@@ -588,7 +588,7 @@ const syncPago = (val,type)=>{
                     </tr>
                   ):null}
                   <tr>
-                    <td><button className="btn btn-outline-success fs-5">{items?items.length:null}</button></td>
+                    <td><button className="btn btn-outline-brand fs-5">{items?items.length:null}</button></td>
                     <th colSpan={auth(1)?"8":"7"} className="p-2 align-middle pointer" onClick={()=>abrirModalCliente()}>
                       {clienteRequerido?
                         <span className="text-danger">Sin cliente, haga clic o pulse F2 para registrarlo</span>
@@ -706,9 +706,9 @@ const syncPago = (val,type)=>{
                             <div className="form-group">
                               <label className="form-label mt-2">Monto en {isrefbanbs
                                   ? 
-                                  <button className="btn btn-outline-sinapsis btn-sm" onClick={()=>{setisrefbanbs(false);setmonto_referenciapago(transferencia)}}>Bs</button>
+                                  <button className="btn btn-outline-brand btn-sm" onClick={()=>{setisrefbanbs(false);setmonto_referenciapago(transferencia)}}>Bs</button>
                                   : 
-                                  <button className="btn btn-outline-success btn-sm" onClick={()=>{setisrefbanbs(true);setmonto_referenciapago(transferencia*dolar)}}>$</button>
+                                  <button className="btn btn-outline-brand btn-sm" onClick={()=>{setisrefbanbs(true);setmonto_referenciapago(transferencia*dolar)}}>$</button>
                                 }  
                               </label>
                               <input type="text" disabled={true} value={monto_referenciapago} onChange={e=>setmonto_referenciapago(e.target.value)} className="form-control" />
@@ -801,7 +801,7 @@ const syncPago = (val,type)=>{
                         <div className="container-fluid">
                           <div className="row">
                             <div className="col p-0">
-                              <div className={(recibido_dolar!=""?"bg-success-light card-sinapsis addref":"t-5")+(" card")}>
+                              <div className={(recibido_dolar!=""?"bg-success-light card-brand addref":"t-5")+(" card")}>
                                 <div className="card-body p-2">
                                   <div className="card-title pointer" >$</div>
                                   <div className="card-text pago-numero"><input type="text" className="fs-3" value={recibido_dolar} onChange={(e)=>changeRecibido(e.target.value,"recibido_dolar")} placeholder="$"/></div>
@@ -810,7 +810,7 @@ const syncPago = (val,type)=>{
                             </div>
 
                             <div className="col p-0">
-                              <div className={(recibido_bs!=""?"bg-success-light card-sinapsis addref":"t-5")+(" card")}>
+                              <div className={(recibido_bs!=""?"bg-success-light card-brand addref":"t-5")+(" card")}>
                                 <div className="card-body p-2">
                                   <div className="card-title pointer" >BS</div>
                                   <div className="card-text pago-numero"><input type="text" className="fs-3" value={recibido_bs} onChange={(e)=>changeRecibido(e.target.value,"recibido_bs")} placeholder="BS"/></div>
@@ -819,7 +819,7 @@ const syncPago = (val,type)=>{
                             </div>
 
                             <div className="col p-0">
-                              <div className={(recibido_cop!=""?"bg-success-light card-sinapsis addref":"t-5")+(" card")}>
+                              <div className={(recibido_cop!=""?"bg-success-light card-brand addref":"t-5")+(" card")}>
                                 <div className="card-body p-2">
                                   <div className="card-title pointer" >COP</div>
                                   <div className="card-text pago-numero"><input type="text" className="fs-3" value={recibido_cop} onChange={(e)=>changeRecibido(e.target.value,"recibido_cop")} placeholder="COP"/></div>
@@ -843,7 +843,7 @@ const syncPago = (val,type)=>{
                         <div className="container-fluid">
                           <div className="row">
                             <div className="col p-0">
-                              <div className={(cambio_dolar!=""?"bg-success-light card-sinapsis addref":"t-5")+(" card")}>
+                              <div className={(cambio_dolar!=""?"bg-success-light card-brand addref":"t-5")+(" card")}>
                                 <div className="card-body p-2">
                                   <div className="card-title pointer " onClick={setVueltodolar} >$</div>
                                   <div className="card-text pago-numero"><input type="text" className="fs-3" value={cambio_dolar} onChange={(e)=>syncCambio(e.target.value,"Dolar")} placeholder="$"/></div>
@@ -852,7 +852,7 @@ const syncPago = (val,type)=>{
                             </div>
 
                             <div className="col p-0">
-                              <div className={(cambio_bs!=""?"bg-success-light card-sinapsis addref":"t-5")+(" card")}>
+                              <div className={(cambio_bs!=""?"bg-success-light card-brand addref":"t-5")+(" card")}>
                                 <div className="card-body p-2">
                                   <div className="card-title pointer " onClick={setVueltobs} >BS</div>
                                   <div className="card-text pago-numero"><input type="text" className="fs-3" value={cambio_bs} onChange={(e)=>syncCambio(e.target.value,"Bolivares")} placeholder="BS"/></div>
@@ -861,7 +861,7 @@ const syncPago = (val,type)=>{
                             </div>
 
                             <div className="col p-0">
-                              <div className={(cambio_cop!=""?"bg-success-light card-sinapsis addref":"t-5")+(" card")}>
+                              <div className={(cambio_cop!=""?"bg-success-light card-brand addref":"t-5")+(" card")}>
                                 <div className="card-body p-2">
                                   <div className="card-title pointer " onClick={setVueltocop} >COP</div>
                                   <div className="card-text pago-numero"><input type="text" className="fs-3" value={cambio_cop} onChange={(e)=>syncCambio(e.target.value,"Pesos")} placeholder="COP"/></div>
@@ -906,14 +906,14 @@ const syncPago = (val,type)=>{
                   </button>
                 :null}
                 {editable?
-                  <button type="button" onMouseDown={evitarFoco} className="btn btn-accion btn-sinapsis" onClick={()=>abrirModalCliente()}>
+                  <button type="button" onMouseDown={evitarFoco} className="btn btn-accion btn-brand" onClick={()=>abrirModalCliente()}>
                     Cliente <span className="tecla">(F2)</span>
                   </button>
                 :null}
-                <button type="button" onMouseDown={evitarFoco} className="btn btn-accion btn-sinapsis" onClick={()=>toggleImprimirTicket()}>
+                <button type="button" onMouseDown={evitarFoco} className="btn btn-accion btn-brand" onClick={()=>toggleImprimirTicket()}>
                   Nota de entrega <span className="tecla">(F3)</span>
                 </button>
-                <button type="button" onMouseDown={evitarFoco} className="btn btn-accion btn-sinapsis" onClick={viewReportPedido}>
+                <button type="button" onMouseDown={evitarFoco} className="btn btn-accion btn-brand" onClick={viewReportPedido}>
                   Ver <span className="tecla">(F4)</span>
                 </button>
                 {editable?

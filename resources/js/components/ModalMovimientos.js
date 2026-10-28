@@ -129,9 +129,9 @@ export default function ModalMovimientos({
         <div className="row">
           <div className="col shadow">
             <div className="btn-group mb-1">
-              <button className={(menuselectdevoluciones=="cliente"?"btn-":"btn-outline-")+("sinapsis btn")} onClick={()=>setmenuselectdevoluciones("cliente")}>Agregar Cliente {clienteselectdevolucion?" #"+clienteselectdevolucion:null}</button>
-              <button className={(menuselectdevoluciones=="inventario"?"btn-":"btn-outline-")+("sinapsis btn")} onClick={()=>setmenuselectdevoluciones("inventario")}>Agregar Productos</button>
-              <button className={(menuselectdevoluciones=="buscar"?"btn-":"btn-outline-")+("sinapsis btn")} onClick={()=>setmenuselectdevoluciones("buscar")}>Histórico</button>
+              <button className={(menuselectdevoluciones=="cliente"?"btn-":"btn-outline-")+("brand btn")} onClick={()=>setmenuselectdevoluciones("cliente")}>Agregar Cliente {clienteselectdevolucion?" #"+clienteselectdevolucion:null}</button>
+              <button className={(menuselectdevoluciones=="inventario"?"btn-":"btn-outline-")+("brand btn")} onClick={()=>setmenuselectdevoluciones("inventario")}>Agregar Productos</button>
+              <button className={(menuselectdevoluciones=="buscar"?"btn-":"btn-outline-")+("brand btn")} onClick={()=>setmenuselectdevoluciones("buscar")}>Histórico</button>
             </div>
             {menuselectdevoluciones=="cliente"?
               <>
@@ -197,7 +197,7 @@ export default function ModalMovimientos({
                                 className="form-control"/>
                             </div>
                             <div className="form-group mt-2">
-                              <button className="btn btn-outline-success btn-block" type="submit">Guardar</button>
+                              <button className="btn btn-outline-brand btn-block" type="submit">Guardar</button>
                             </div>
                         </form>
                       </td>
@@ -251,7 +251,7 @@ export default function ModalMovimientos({
 
                   {devolucionTipo&&devolucionSalidaEntrada!==null&&devolucionCt?<div className="mt-4 mb-3 text-center">
                     {devolucionSalidaEntrada==1&&!devolucionMotivo?null:
-                      <button className="btn btn-success" onClick={agregarProductoDevolucionTemporal}>Agregar Producto</button>
+                      <button className="btn btn-brand" onClick={agregarProductoDevolucionTemporal}>Agregar Producto</button>
                     }
                   </div>:null}
                 </div>
@@ -425,7 +425,7 @@ export default function ModalMovimientos({
                           <label htmlFor="">Monto Pago</label>
                           <input value={pagosselectdevolucionmonto} placeholder="Monto en $ a pagar" onChange={e=>setpagosselectdevolucionmonto(number(e.target.value))} className="form-control"/>
                         </div>
-                        <button className="btn btn-success mt-1" onClick={sethandlepagosselectdevolucion}>Agregar pago</button>
+                        <button className="btn btn-brand mt-1" onClick={sethandlepagosselectdevolucion}>Agregar pago</button>
                       </div>
 
                       <table className="table">
@@ -460,7 +460,7 @@ export default function ModalMovimientos({
                           <label htmlFor="">Monto Pago</label>
                           <input value={pagosselectdevolucionmonto} placeholder="Monto en $ a pagar" onChange={e=>setpagosselectdevolucionmonto(number(e.target.value))} className="form-control"/>
                         </div>
-                        <button className="btn btn-success mt-1" onClick={sethandlepagosselectdevolucion}>Agregar pago</button>
+                        <button className="btn btn-brand mt-1" onClick={sethandlepagosselectdevolucion}>Agregar pago</button>
                       </div>
 
                       <table className="table">
@@ -485,7 +485,7 @@ export default function ModalMovimientos({
         </div>
       </div>
       <div className="mt-4 text-center">
-        <button className="btn btn-sinapsis btn-lg" onClick={setDevolucion} disabled={(clienteselectdevolucion&&productosselectdevolucion.length)?false:true}>Guardar{clienteselectdevolucion?(productosselectdevolucion.length?true:(" (Debe agregar un producto)")):" (Debe agregar un cliente)"}</button>
+        <button className="btn btn-brand btn-lg" onClick={setDevolucion} disabled={(clienteselectdevolucion&&productosselectdevolucion.length)?false:true}>Guardar{clienteselectdevolucion?(productosselectdevolucion.length?true:(" (Debe agregar un producto)")):" (Debe agregar un cliente)"}</button>
       </div>
     </div>
 
@@ -580,11 +580,11 @@ export default function ModalMovimientos({
           <div className="container-fluid">
             <div className="row">
               <div className="col-2">
-                <h4>Devoluciones <button className="btn btn-success" onClick={()=>setIdMovSelect("nuevo")}>Nuevo</button></h4>
+                <h4>Devoluciones <button className="btn btn-brand" onClick={()=>setIdMovSelect("nuevo")}>Nuevo</button></h4>
                 <input type="text" className="form-control mb-1" placeholder="Buscar..." onChange={e=>getMovimientos(e.target.value)}/>
                 <div className="list-items">
                   {movimientos.length?movimientos.map(e=>
-                    <div className={("card-pedidos pointer ")+(e.id==idMovSelect?"bg-sinapsis-light":null)} key={e.id} onClick={()=>setIdMovSelect(e.id)}>Mov. {e.id}</div>
+                    <div className={("card-pedidos pointer ")+(e.id==idMovSelect?"bg-brand-light":null)} key={e.id} onClick={()=>setIdMovSelect(e.id)}>Mov. {e.id}</div>
 
                   ):null}
                 </div>

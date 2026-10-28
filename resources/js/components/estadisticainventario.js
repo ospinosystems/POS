@@ -70,7 +70,7 @@ export default function EstadisticaInventario({
 							<td>{e.descripcion}</td>
 							<td>{e.cantidad}</td>
 							<td className="text-success">{moneda(e.precio)}</td>
-							<td className="text-sinapsis">{e.cantidadtotal}</td>
+							<td className="text-brand">{e.cantidadtotal}</td>
 							<td className="text-success">{moneda(e.totalventa)}</td>
 
 						</tr>

@@ -28,28 +28,28 @@ class CreateUsuariosTable extends Migration
         });
         DB::table("usuarios")->insert([
             [
-            "nombre" => "Alvaro Ospino",
+            "nombre" => "Administrador",
             "usuario" => "admin",
             "clave" => Hash::make("1234"),
             "tipo_usuario" => "1",
             ],
 
             [
-            "nombre" => "Perez",
+            "nombre" => "Caja",
             "usuario" => "caja",
             "clave" => Hash::make("1234"),
             "tipo_usuario" => "2",
             ],
 
             [
-            "nombre" => "Rodiguez",
+            "nombre" => "Vendedor",
             "usuario" => "vendedor",
             "clave" => Hash::make("1234"),
             "tipo_usuario" => "3",
             ],
 
             [
-            "nombre" => "Alfonzo",
+            "nombre" => "Cajero Vendedor",
             "usuario" => "cajero_vendedor",
             "clave" => Hash::make("1234"),
             "tipo_usuario" => "4",

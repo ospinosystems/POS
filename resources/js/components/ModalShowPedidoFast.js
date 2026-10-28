@@ -39,7 +39,7 @@ onClickEditPedido,
 	        <div className="modal-content">
 	        	<div className={(" text-center p-1 d-flex justify-content-between")}>
               <span className="text-muted m-2">{created_at}</span>
-              <button data-id={id} onClick={onClickEditPedido} className="btn btn-lg btn-block btn-outline-sinapsis">Pedido #{id}</button>
+              <button data-id={id} onClick={onClickEditPedido} className="btn btn-lg btn-block btn-outline-brand">Pedido #{id}</button>
             </div>
             <div className="container-fluid">
             	<div className="row">
@@ -48,16 +48,16 @@ onClickEditPedido,
 				        	<table className="table table-striped text-center">
 			              <thead>
 			                <tr>
-			                  <th className="text-sinapsis cell2">Código</th>
-			                  <th className="text-sinapsis cell3">Producto</th>
-			                  <th className="text-sinapsis cell1">Cant.</th>
-			                  <th className="text-sinapsis cell1">Precio</th>
+			                  <th className="text-brand cell2">Código</th>
+			                  <th className="text-brand cell3">Producto</th>
+			                  <th className="text-brand cell1">Cant.</th>
+			                  <th className="text-brand cell1">Precio</th>
 			                  {/*
-			                  <th className="text-sinapsis">Sub-total</th>
-			                  <th className="text-sinapsis">Desc.%</th>
-			                  <th className="text-sinapsis">Tot.Desc.</th>
+			                  <th className="text-brand">Sub-total</th>
+			                  <th className="text-brand">Desc.%</th>
+			                  <th className="text-brand">Tot.Desc.</th>
 			                  */}
-			                  <th className="text-sinapsis cell2">Total</th>
+			                  <th className="text-brand cell2">Total</th>
 			                  
 			                </tr>
 			              </thead>
@@ -102,7 +102,7 @@ onClickEditPedido,
 			                  </tr>
 			                ):null}
 			                <tr>
-			                  <td><button className="btn btn-outline-success fs-5">{items?items.length:null}</button></td>
+			                  <td><button className="btn btn-outline-brand fs-5">{items?items.length:null}</button></td>
 			                  <th colSpan="5" className="p-2 align-middle">{cliente?cliente.nombre:null} <b>{cliente?cliente.identificacion:null}</b></th>
 			                </tr>
 			              </tbody>
@@ -170,7 +170,7 @@ onClickEditPedido,
 				    						:null}
 
 				    						{ee.monto!=0&&ee.tipo==4?
-				    							<span className="btn btn-sinapsis btn-sm">Cred. {ee.monto}</span>
+				    							<span className="btn btn-brand btn-sm">Cred. {ee.monto}</span>
 				    						:null}
 
 				    						{ee.monto!=0&&ee.tipo==5?

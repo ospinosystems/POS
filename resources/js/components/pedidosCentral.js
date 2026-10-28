@@ -74,14 +74,14 @@ export default function PedidosCentralComponent({
             ) : null}
 
 				<div className="btn-group mb-2">
-					<button className={subviewcentral == "pedidos" ? ("btn btn-outline-sinapsis") : ("btn btn-outline-secondary")} onClick={() => { getPedidosCentral(); setsubviewcentral("pedidos") }}>Recibir Pedidos</button>
-					<button className={subviewcentral == "tareas" ? ("btn btn-outline-sinapsis") : ("btn btn-outline-secondary")} onClick={() => { setsubviewcentral("tareas") }}>Tareas</button>
-					{/* <button className={subviewcentral == "inventario" ? ("btn btn-outline-sinapsis") : ("btn btn-outline-secondary")} onClick={() => { getInventarioFromSucursal(); setsubviewcentral("inventario") }}>Actualizar Inventario</button>
+					<button className={subviewcentral == "pedidos" ? ("btn btn-outline-brand") : ("btn btn-outline-secondary")} onClick={() => { getPedidosCentral(); setsubviewcentral("pedidos") }}>Recibir Pedidos</button>
+					<button className={subviewcentral == "tareas" ? ("btn btn-outline-brand") : ("btn btn-outline-secondary")} onClick={() => { setsubviewcentral("tareas") }}>Tareas</button>
+					{/* <button className={subviewcentral == "inventario" ? ("btn btn-outline-brand") : ("btn btn-outline-secondary")} onClick={() => { getInventarioFromSucursal(); setsubviewcentral("inventario") }}>Actualizar Inventario</button>
  */}
 				</div>
 				{subviewcentral == "tareas" ?
 					<>
-						<h1>Tareas <button className="btn btn-outline-success btn-sm" onClick={()=>getTareasCentral([0])}> <i className="fa fa-search"></i>	</button></h1>
+						<h1>Tareas <button className="btn btn-outline-brand btn-sm" onClick={()=>getTareasCentral([0])}> <i className="fa fa-search"></i>	</button></h1>
 						<div className="row">
 
 							<div className="col">
@@ -199,12 +199,12 @@ export default function PedidosCentralComponent({
 					: null}
 				{subviewcentral == "pedidos" ?
 					<>
-						<h1>Pedidos <button className="btn btn-outline-success btn-sm" onClick={()=>getPedidosCentral()}><i className="fa fa-search"></i></button></h1>
+						<h1>Pedidos <button className="btn btn-outline-brand btn-sm" onClick={()=>getPedidosCentral()}><i className="fa fa-search"></i></button></h1>
 						<div className="row">
 
 							<div className="col-3">
 								<div className="mb-2">
-									{/*<button className="btn btn-success w-100" onClick={getmastermachine}>Buscar a Master</button>
+									{/*<button className="btn btn-brand w-100" onClick={getmastermachine}>Buscar a Master</button>
 								<ul className="list-group">
 									{mastermachines ? mastermachines.map((e,i)=>
 										<li key={i} onClick={() => setpathcentral(e)} className={(pathcentral==e?"active":null)+(" list-group-item-action list-group-item")}>{e}</li>
@@ -215,9 +215,9 @@ export default function PedidosCentralComponent({
 								</div>
 								<div className="btn-group btn-group-vertical w-100">
 
-									{/* <button className="btn btn-outline-success" onClick={setInventarioFromSucursal}>Actualizar Inventario</button> */}
+									{/* <button className="btn btn-outline-brand" onClick={setInventarioFromSucursal}>Actualizar Inventario</button> */}
 
-									{/* <button className="btn btn-outline-success" onClick={()=>setshowaddpedidocentral(!showaddpedidocentral)}><i className="fa fa-plus"></i></button> */}
+									{/* <button className="btn btn-outline-brand" onClick={()=>setshowaddpedidocentral(!showaddpedidocentral)}><i className="fa fa-plus"></i></button> */}
 								</div>
 								<div>
 									{
@@ -264,7 +264,7 @@ export default function PedidosCentralComponent({
 												<div className="w-50 text-right">
 													<span>
 														<span className="h6 text-muted font-italic">Base. </span>
-														<span className="h6 text-sinapsis">{moneda(pedidosCentral[indexPedidoCentral].base)}</span>
+														<span className="h6 text-brand">{moneda(pedidosCentral[indexPedidoCentral].base)}</span>
 													</span>
 													<br />
 
@@ -322,7 +322,7 @@ export default function PedidosCentralComponent({
 																					>
 																						<i className="fa fa-link"></i>
 																					</button>
-																				:<button className={"btn-outline-success btn fs-10px btn-sm"}>
+																				:<button className={"btn-outline-brand btn fs-10px btn-sm"}>
 																					<i className="fa fa-check"></i>
 																				</button>
 																			} 
@@ -335,7 +335,7 @@ export default function PedidosCentralComponent({
 																<td className='align-bottom'>{e.match&&e.match.precio_base?e.match.precio_base: <small className="text-muted">se creará nuevo</small>	}</td>
 																<td className='align-bottom'>{e.match&&e.match.precio?e.match.precio: <small className="text-muted">se creará nuevo</small>	}</td>
 															</tr>
-															<tr className={(e.aprobado ? "bg-success-light" : "bg-sinapsis-light" ) + (" pointer borderbottom")}>
+															<tr className={(e.aprobado ? "bg-success-light" : "bg-brand-light" ) + (" pointer borderbottom")}>
 																<td
 																	onClick={selectPedidosCentral}
 																	data-index={i}
@@ -345,7 +345,7 @@ export default function PedidosCentralComponent({
 																		<button className="btn btn-outline-danger"><i className="fa fa-times"></i></button>
 																	:
 																		e.aprobado === true?
-																			<button className="btn btn-outline-success"><i className="fa fa-check"></i></button>
+																			<button className="btn btn-outline-brand"><i className="fa fa-check"></i></button>
 																		:null
 																	}
 
@@ -369,7 +369,7 @@ export default function PedidosCentralComponent({
 																	{e.producto.codigo_proveedor}
 																</td>
 																<td className="align-top">{e.producto.descripcion} <small className='text-muted'>Central</small></td>
-																<td className="align-top text-sinapsis">{moneda(e.producto.precio_base)}</td>
+																<td className="align-top text-brand">{moneda(e.producto.precio_base)}</td>
 																<td className="align-top text-success">{moneda(e.producto.precio)}</td>
 																<td className="align-top text-right">{moneda(e.monto)}</td>
 															</tr>
@@ -382,7 +382,7 @@ export default function PedidosCentralComponent({
 										pedidosCentral[indexPedidoCentral] ?
 											!pedidosCentral[indexPedidoCentral].items.filter(e => (typeof (e.aprobado) === "undefined") || (e.ct_real == "" || e.ct_real == 0)).length ?
 												<div className="btn-group">
-													<button className="btn btn-outline-success btn-block btn-xl" onClick={checkPedidosCentral}>Guardar Pedido</button>
+													<button className="btn btn-outline-brand btn-block btn-xl" onClick={checkPedidosCentral}>Guardar Pedido</button>
 												</div>
 												: null
 											: null
@@ -401,7 +401,7 @@ export default function PedidosCentralComponent({
 
 									</div>
 									<div className="form-group">
-										<button className="btn btn-block btn-success" onClick={procesarImportPedidoCentral}>Importar</button>
+										<button className="btn btn-block btn-brand" onClick={procesarImportPedidoCentral}>Importar</button>
 									</div>
 								</div>}
 						</div>
@@ -410,7 +410,7 @@ export default function PedidosCentralComponent({
 				{/* {subviewcentral == "inventario" ?
 					<>
 						<h1>Inventario</h1>
-						<button className="btn btn-outline-sinapsis pull-right" onClick={() => { setInventarioFromSucursal(); setsubviewcentral("") }}>Exportar inventario a Central</button>
+						<button className="btn btn-outline-brand pull-right" onClick={() => { setInventarioFromSucursal(); setsubviewcentral("") }}>Exportar inventario a Central</button>
 
 						<table className="table">
 							<thead>
@@ -470,7 +470,7 @@ export default function PedidosCentralComponent({
 								</tr>}
 							</tbody>
 						</table>
-						{inventarioModifiedCentralImport.length ? <button className="btn btn-outline-success w-100" onClick={saveChangeInvInSucurFromCentral}>
+						{inventarioModifiedCentralImport.length ? <button className="btn btn-outline-brand w-100" onClick={saveChangeInvInSucurFromCentral}>
 							Guardar Cambios
 						</button> : null}
 					</>

@@ -59,7 +59,7 @@ export default function Modalconfigcreditio({
           		</select>
           	</div>
           	<div className="form-group mb-3">
-          		<button className="btn btn-outline-sinapsis">Guardar configuración de crédito</button>
+          		<button className="btn btn-outline-brand">Guardar configuración de crédito</button>
 
           		<span className="btn btn-outline-secondary" onClick={setPagoPedido}>Procesar pedido</span>
           	</div>

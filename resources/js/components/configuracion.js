@@ -40,9 +40,9 @@ categorias,
         <div className="row">
 	        <div className="col mb-2 d-flex justify-content-between">
 	          <div className="btn-group">              
-              <button className={("btn ")+(subViewConfig=="usuarios"?"btn-success":"btn-outline-success")} onClick={()=>setsubViewConfig("usuarios")}>Usuarios</button>
+              <button className={("btn ")+(subViewConfig=="usuarios"?"btn-brand":"btn-outline-brand")} onClick={()=>setsubViewConfig("usuarios")}>Usuarios</button>
               
-              <button className={("btn ")+(subViewConfig=="categorias"?"btn-success":"btn-outline-success")} onClick={()=>setsubViewConfig("categorias")}>Categorías</button>
+              <button className={("btn ")+(subViewConfig=="categorias"?"btn-brand":"btn-outline-brand")} onClick={()=>setsubViewConfig("categorias")}>Categorías</button>
               
 	          </div>
 	        </div>

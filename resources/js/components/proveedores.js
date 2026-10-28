@@ -49,7 +49,7 @@ function Proveedores({
       <div className="container">
         <div className="row">
           <div className="col">
-              <h1>Proveedores <button className="btn btn-sm btn-success" onClick={setNuevoProveedor}>Nuevo</button></h1>
+              <h1>Proveedores <button className="btn btn-sm btn-brand" onClick={setNuevoProveedor}>Nuevo</button></h1>
 
               <div className="">
                 <div className="input-group ">
@@ -70,7 +70,7 @@ function Proveedores({
                   onClick={setIndexSelectProveedoresFun} 
                   data-index={i}
                   key={e.id}
-                  className={(indexSelectProveedores==i?"bg-sinapsis":"bg-light text-secondary")+" card mt-2 pointer"}>
+                  className={(indexSelectProveedores==i?"bg-brand":"bg-light text-secondary")+" card mt-2 pointer"}>
                     <div className="card-header flex-row row justify-content-between">
                       <div>
                         <small>ID.{e.id}</small>
@@ -136,10 +136,10 @@ function Proveedores({
                 </div>
                 <div className="form-group mt-1">
                 {indexSelectProveedores==null?
-                  <button className="btn btn-outline-success btn-block" type="submit">Guardar</button>
+                  <button className="btn btn-outline-brand btn-block" type="submit">Guardar</button>
                 : 
                   <div className="btn-group">
-                    <button className="btn btn-sinapsis btn-block" type="submit">Editar</button>
+                    <button className="btn btn-brand btn-block" type="submit">Editar</button>
                     <button className="btn btn-outline-danger btn-block" onClick={delProveedor} type="button"><i className="fa fa-times"></i></button>
                     
                   </div>

@@ -46,7 +46,7 @@ export default function Gastos({
                         <option value="2">Nómina</option>
                    
                     </select>
-                    <button className="btn btn-outline-success"><i className="fa fa-paper-plane"></i></button>
+                    <button className="btn btn-outline-brand"><i className="fa fa-paper-plane"></i></button>
 
                 </form>
             </div>

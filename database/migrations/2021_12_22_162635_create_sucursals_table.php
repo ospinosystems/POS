@@ -33,25 +33,20 @@ class CreateSucursalsTable extends Migration
             $table->string("fiscal")->nullable();
             $table->string("app_version")->default("1");
             
-// SUCURSAL="Mantecal"
-// CODIGO="ARAMCAL"
-// DIRECCION_REGISTRO="Av. Bolívar Cruce con Indio Figueredo, Casa Nro. S/N Sector Centro Elorza, Estado Aure Zona Postal 7011"
-// DIRECCION_SUCURSAL="Av. Libertador Local S/N Sector centro, Parroquia Mantecal Municipio Muñoz, Estado Apure Zona postal 7011"
-
             $table->timestamps();
         });
 
         DB::table("sucursals")->insert([
             [
-                "sucursal" => "aaa",
-                "codigo" => "ARAMCAL",
-                "direccion_registro" => "aaa",
-                "direccion_sucursal" => "aaa",
-                "telefono1" => "aaa",
-                "telefono2" => "aaa",
-                "correo" => "aaa",
-                "nombre_registro" => "aaa",
-                "rif" => "aaa",
+                "sucursal" => "MI COMERCIO",
+                "codigo" => "POS01",
+                "direccion_registro" => "N/A",
+                "direccion_sucursal" => "N/A",
+                "telefono1" => "N/A",
+                "telefono2" => "N/A",
+                "correo" => "N/A",
+                "nombre_registro" => "MI COMERCIO",
+                "rif" => "J-00000000-0",
             ],
         ]);
     }

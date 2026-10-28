@@ -6,8 +6,7 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="icon" type="image/png" href="{{ asset('images/icon.ico') }}">
-    <title>sinapsis</title>
+    <title>{{ config('app.name', 'POS') }}</title>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/table/table.css') }}" rel="stylesheet">
@@ -17,17 +16,12 @@
    
     <div class="container">
         <div class="row">
-            <div class="col d-flex justify-content-center">
-                <img src="{{asset('images/logo.png')}}" alt="" class="logo">
-            </div>
-        </div>
-        <div class="row">
             <div class="col">
                 <form action="{{route('setSucursal')}}" method="">
   <div class="form-group">
     <label for="sucursal">Empresa</label>
     <input type="text" required name="sucursal" value="{{$sucursal?$sucursal->sucursal:null}}" class="form-control" id="sucursal" placeholder="Nombre de la Empresa">
-    <small id="emailHelp" class="form-text text-muted">Ejemplo: Mantecal</small>
+    <small id="emailHelp" class="form-text text-muted">Ejemplo: Mi Comercio</small>
   </div>
   <div class="form-group">
     <label for="codsucursal">Código</label>
@@ -90,7 +84,7 @@
   
 
   
-  <button type="submit" class="btn btn-sinapsis">Enviar</button>
+  <button type="submit" class="btn btn-brand">Enviar</button>
 </form>
 
             </div>

@@ -114,7 +114,7 @@ function Cargarproducto({
                   onClick={setIndexSelectInventarioFun} 
                   data-index={i}
                   key={i}
-                  className={(indexSelectInventario==i?"bg-sinapsis":"bg-light text-secondary")+" card mt-2 pointer"}>
+                  className={(indexSelectInventario==i?"bg-brand":"bg-light text-secondary")+" card mt-2 pointer"}>
                     <div className="card-header flex-row justify-content-between">
                       <div>
                         <small>ID.{e.id}</small>
@@ -222,7 +222,7 @@ function Cargarproducto({
               </div>
               <div className="row">
                 <div className="col text-right">
-                  <div className="bg-sinapsis p-2">
+                  <div className="bg-brand p-2">
                     Base. <input required className="h1 input-ct" 
                     type="text"
                     value={inpInvbase} 
@@ -266,7 +266,7 @@ function Cargarproducto({
                           Ct.
                         </th>
                         <th>
-                         <span className="btn-sm btn btn-success" onClick={addNewLote}><i className="fa fa-plus"></i></span>
+                         <span className="btn-sm btn btn-brand" onClick={addNewLote}><i className="fa fa-plus"></i></span>
 
                         </th>
                       </tr>
@@ -342,10 +342,10 @@ function Cargarproducto({
               <div className="row">
                 <div className="col text-center">
                   {indexSelectInventario==null?
-                    <button className="btn btn-outline-success btn-block" type="submit">Guardar</button>
+                    <button className="btn btn-outline-brand btn-block" type="submit">Guardar</button>
                   :
                     <div className="btn-group">
-                      <button className="btn btn-sinapsis btn-block" type="submit">Editar</button>
+                      <button className="btn btn-brand btn-block" type="submit">Editar</button>
                       <button className="btn btn-outline-danger btn-block" onClick={delProducto} type="button"><i className="fa fa-times"></i></button>
                     </div>
                   }

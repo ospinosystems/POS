@@ -1,5 +1,3 @@
-import logo from "../../images/logo.png"
-
 import React, {Component} from 'react';
 import Cargando from './cargando';
 // import {handleNotification,Notification} from './handleNotification';
@@ -61,7 +59,7 @@ class Login extends Component{
 			<div className="login">
 
 				<div className="login-logo">
-					<img src={logo} alt="logo" />
+					<span className="login-titulo"><i className="fa fa-shopping-cart"></i> Punto de Venta</span>
 				</div>
 
 				<div className="wrap-login100">
@@ -86,9 +84,6 @@ class Login extends Component{
 						
 					</form>
 				</div>
-				<span className="login-firma text-muted text-center">
-					Ospino Systems C.A.
-				</span>
 			</div>
 		);
 	}

@@ -7,7 +7,6 @@
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="icon" type="image/png" href="{{ asset('images/favicon.ico') }}">
     <title>Nota de Entrega {{$pedido->id}}</title>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -16,13 +15,6 @@
 <body>
     <section class="container-fluid">
 			<table class="table table-bordered">
-				<thead>
-					<tr class="text-center">
-						<td colspan="6">
-							<img src="{{ asset('images/logo.png') }}" width="200px">
-						</td>
-					</tr>
-				</thead>
 				<tbody>
 					<tr class="text-center">
 						<td colspan="2">

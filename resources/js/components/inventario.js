@@ -285,18 +285,16 @@ function Inventario({
         <div className="row">
         <div className="col mb-2 d-flex justify-content-between">
           <div className="btn-group">              
-              <button className={("btn ")+(subViewInventario=="inventario"?"btn-success":"btn-outline-success")} onClick={()=>setsubViewInventario("inventario")}>Inventario</button>
+              <button className={("btn ")+(subViewInventario=="inventario"?"btn-brand":"btn-outline-brand")} onClick={()=>setsubViewInventario("inventario")}>Inventario</button>
               
               {user.iscentral?
-                <button className={("btn ")+(subViewInventario=="precarga"?"btn-success":"btn-outline-success")} onClick={()=>setsubViewInventario("precarga")}>PreCarga</button>
+                <button className={("btn ")+(subViewInventario=="precarga"?"btn-brand":"btn-outline-brand")} onClick={()=>setsubViewInventario("precarga")}>PreCarga</button>
               :null}
-              {user.iscentral?
-                <button className={("btn ")+(subViewInventario=="proveedores"?"btn-success":"btn-outline-success")} onClick={()=>setsubViewInventario("proveedores")}>Proveedores</button>
-              :null}
+              <button className={("btn ")+(subViewInventario=="proveedores"?"btn-brand":"btn-outline-brand")} onClick={()=>setsubViewInventario("proveedores")}>Proveedores</button>
               <>
-                <button className={("btn ") + (subViewInventario=="facturas"?"btn-success":"btn-outline-success")} onClick={()=>setsubViewInventario("facturas")}>Facturas</button>
+                <button className={("btn ") + (subViewInventario=="facturas"?"btn-brand":"btn-outline-brand")} onClick={()=>setsubViewInventario("facturas")}>Facturas</button>
               </>
-              <button className={("btn ") + (subViewInventario=="fallas"?"btn-success":"btn-outline-success")} onClick={()=>setsubViewInventario("fallas")}>Fallas</button>
+              <button className={("btn ") + (subViewInventario=="fallas"?"btn-brand":"btn-outline-brand")} onClick={()=>setsubViewInventario("fallas")}>Fallas</button>
           </div>
           <div className="btn-group">
               <button className={("btn btn-outline-primary")} onClick={() => reportefiscal("x")}>REPORTE X</button>
@@ -304,8 +302,8 @@ function Inventario({
           </div>
 
           <div className="btn-group">
-              <button className={("btn ") + (subViewInventario == "gastos" ? "btn-success" : "btn-outline-success")} onClick={() => setsubViewInventario("gastos")}>Gastos</button>
-              <button className={("btn ") + (subViewInventario=="estadisticas"?"btn-success":"btn-outline-success")} onClick={()=>setsubViewInventario("estadisticas")}>Estadísticas</button> 
+              <button className={("btn ") + (subViewInventario == "gastos" ? "btn-brand" : "btn-outline-brand")} onClick={() => setsubViewInventario("gastos")}>Gastos</button>
+              <button className={("btn ") + (subViewInventario=="estadisticas"?"btn-brand":"btn-outline-brand")} onClick={()=>setsubViewInventario("estadisticas")}>Estadísticas</button> 
           </div>
           
         </div>
@@ -382,8 +380,8 @@ function Inventario({
                 <div className="container-fluid">
                   <div className="row">
                     <div className="col d-flex justify-content-center">
-                      <button className="btn btn-sinapsis ms-2" onClick={()=>setmodViewInventario("list")}>Gestión <i className="fa fa-paper-plane"></i></button>
-                      <button className="btn btn-sinapsis ms-2" onClick={()=>setmodViewInventario("historico")}>Histórico <i className="fa fa-refresh"></i></button>
+                      <button className="btn btn-brand ms-2" onClick={()=>setmodViewInventario("list")}>Gestión <i className="fa fa-paper-plane"></i></button>
+                      <button className="btn btn-brand ms-2" onClick={()=>setmodViewInventario("historico")}>Histórico <i className="fa fa-refresh"></i></button>
 
                     </div>
                     
@@ -430,7 +428,7 @@ function Inventario({
                     <option value="desc">DESC</option>
                   </select>
 
-                  <button className="btn btn-success" onClick={getHistoricoInventario}><i className="fa fa-search"></i></button>
+                  <button className="btn btn-brand" onClick={getHistoricoInventario}><i className="fa fa-search"></i></button>
                   
 
                 </div>

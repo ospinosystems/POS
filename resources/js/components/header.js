@@ -1,5 +1,3 @@
-import logo from "../../images/logo.png"
-import carrito from "../../images/carrito1.png"
 function Header({
   updatetasasfromCentral,
   user,
@@ -26,10 +24,9 @@ function Header({
   const item = (activo) => "header-item" + (activo ? " activo" : "")
 
   return (
-    <header className="header-bar bg-sinapsis mb-2 container">
+    <header className="header-bar bg-brand mb-2 container">
       <div className="d-flex align-items-center flex-nowrap">
 
-        <img src={logo} alt="sinapsis" className="header-logo" />
         <span className="header-sucursal" title={user.sucursal}>{user.sucursal}</span>
         <span className="header-sep"></span>
 
@@ -67,9 +64,8 @@ function Header({
         <small className="header-tasa" onClick={setMoneda} data-type="2" title="Cambiar tasa COP">COP {peso}</small>
 
         <div className="header-derecha">
-          <img src={carrito} alt="Pedidos" title="Pedidos"
-            className="header-carrito pointer"
-            onClick={()=>{ setView("pedidos"); getPedidos() }}/>
+          <span className="header-icon header-carrito" title="Pedidos"
+            onClick={()=>{ setView("pedidos"); getPedidos() }}><i className="fa fa-shopping-cart"></i></span>
           <span className="header-sep"></span>
           {auth(1)?<span className="header-icon" title="Configuración" onClick={()=>setView("configuracion")}><i className="fa fa-cogs"></i></span>:null}
           <span className="header-user pointer" onClick={getip} title={user.nombre+" - "+user.usuario+" ("+user.role+")"}>

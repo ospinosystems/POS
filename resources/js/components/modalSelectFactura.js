@@ -137,12 +137,12 @@ function ModalSelectFactura({
               <div className="">
                 <div className="d-flex justify-content-between">
                   <div>
-                    {modFact =="factura"?<button className="btn-sm btn btn-outline-success mb-1" onClick={()=>setNuevaFact()}>Nuevo</button>:null}
+                    {modFact =="factura"?<button className="btn-sm btn btn-outline-brand mb-1" onClick={()=>setNuevaFact()}>Nuevo</button>:null}
                   </div>
                   <div>
                     <div className="btn-group mb-1">
-                      <button className={("btn btn-sm ")+(modFact=="factura"?"btn":"btn-outline")+("-success")} onClick={() => setmodFact("factura")}>Facturas</button>
-                      <button className={("btn btn-sm ")+(modFact=="proveedor"?"btn":"btn-outline")+("-success")} onClick={() => setmodFact("proveedor")}>Pagos</button>
+                      <button className={("btn btn-sm ")+(modFact=="factura"?"btn":"btn-outline")+("-brand")} onClick={() => setmodFact("factura")}>Facturas</button>
+                      <button className={("btn btn-sm ")+(modFact=="proveedor"?"btn":"btn-outline")+("-brand")} onClick={() => setmodFact("proveedor")}>Pagos</button>
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ function ModalSelectFactura({
                         <div
                           onClick={()=>setIndexSelectProveedores(i)}
                           key={e.id}
-                          className={(indexSelectProveedores == i ? "bg-sinapsis" : "bg-light text-secondary") + " card mt-2 pointer"}>
+                          className={(indexSelectProveedores == i ? "bg-brand" : "bg-light text-secondary") + " card mt-2 pointer"}>
                           <div className="card-header flex-row row justify-content-between">
                             <div>
                               <small>ID.{e.id}</small>
@@ -239,8 +239,8 @@ function ModalSelectFactura({
                       <div className="d-flex justify-content-between">
                         <div>
                           
-                          <button className="btn-sm btn btn-outline-success" onClick={()=>setfactSelectIndexFun(i,"agregar")}><i className="fa fa-pencil"></i></button>
-                          <button className="btn-sm btn btn-outline-success" onClick={()=>setfactSelectIndexFun(i,"detalles")}><i className="fa fa-send"></i></button>
+                          <button className="btn-sm btn btn-outline-brand" onClick={()=>setfactSelectIndexFun(i,"agregar")}><i className="fa fa-pencil"></i></button>
+                          <button className="btn-sm btn btn-outline-brand" onClick={()=>setfactSelectIndexFun(i,"detalles")}><i className="fa fa-send"></i></button>
                         </div>
 
                         <div><span className="text-success">{moneda(e.monto)}</span></div>
@@ -283,7 +283,7 @@ function ModalSelectFactura({
                       </div>
                       <div className="col-md-auto d-flex align-items-center">
                         <div className="form-group">
-                          <button className="btn btn-outline-success">Guardar</button>
+                          <button className="btn btn-outline-brand">Guardar</button>
                         </div>
 
                       </div>
@@ -342,8 +342,8 @@ function ModalSelectFactura({
             {modFact == "factura" ?
               <div className="col">
                 <div className="btn-group mb-4">
-                  <button className={("btn ")+(factsubView=="detalles"?"btn-dark":"btn-sinapsis")} onClick={()=>setfactsubView("detalles")}>Detalles</button>            
-                  <button className={("btn ")+(factsubView=="agregar"?"btn-dark":"btn-sinapsis")} onClick={()=>setfactsubView("agregar")}>
+                  <button className={("btn ")+(factsubView=="detalles"?"btn-dark":"btn-brand")} onClick={()=>setfactsubView("detalles")}>Detalles</button>            
+                  <button className={("btn ")+(factsubView=="agregar"?"btn-dark":"btn-brand")} onClick={()=>setfactsubView("agregar")}>
 
                     {factSelectIndex==null?
                       <span>Agregar</span>
@@ -442,10 +442,10 @@ function ModalSelectFactura({
                       
                       <div className="form-group mt-2">
                       {factSelectIndex==null?
-                        <button className="btn btn-outline-success btn-block" type="submit">Guardar</button>
+                        <button className="btn btn-outline-brand btn-block" type="submit">Guardar</button>
                       : 
                         <div className="btn-group">
-                          <button className="btn btn-sinapsis btn-block" type="submit">Editar</button>
+                          <button className="btn btn-brand btn-block" type="submit">Editar</button>
                           <button className="btn btn-outline-danger btn-block" onClick={delFactura} type="button"><i className="fa fa-times"></i></button>
                           
                         </div>
@@ -459,12 +459,12 @@ function ModalSelectFactura({
                     <div className="d-flex justify-content-between">
                       <div>
                         <small className="text-muted">Items. {facturas[factSelectIndex].items ? facturas[factSelectIndex].items.length :null}</small><br/>
-                        <span className="fw-bold">{facturas[factSelectIndex].proveedor.descripcion} <button className="btn btn-outline-success btn-sm" onClick={() => linkfact("prove", facturas[factSelectIndex].proveedor.descripcion)}>Pagar</button> </span><br />
+                        <span className="fw-bold">{facturas[factSelectIndex].proveedor.descripcion} <button className="btn btn-outline-brand btn-sm" onClick={() => linkfact("prove", facturas[factSelectIndex].proveedor.descripcion)}>Pagar</button> </span><br />
                         <p>{facturas[factSelectIndex].descripcion}</p>
                       </div>
                       <div className="text-right">
                         
-                        <button className="btn btn-outline-success" onClick={saveFactura}>Guardar Factura {moneda(facturas[factSelectIndex].monto)}</button><br/>
+                        <button className="btn btn-outline-brand" onClick={saveFactura}>Guardar Factura {moneda(facturas[factSelectIndex].monto)}</button><br/>
                         
                         
                       </div>
@@ -514,7 +514,7 @@ function ModalSelectFactura({
                       </tbody>
                     </table>
                     <div className="m-5 d-flex justify-content-center align-items-center">
-                      <button className="btn btn lg btn-xl btn-outline-success" onClick={verDetallesFactura}>Ver todo <i className="fa fa-send"></i></button>
+                      <button className="btn btn lg btn-xl btn-outline-brand" onClick={verDetallesFactura}>Ver todo <i className="fa fa-send"></i></button>
                     </div>
                   </>:null
                 :null}

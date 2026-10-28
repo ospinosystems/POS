@@ -82,7 +82,9 @@ export default function InventarioForzado({
         }catch(err){
             return ""
         }
-    } 
+    }
+    // Filas nuevas, editadas o marcadas para borrar que aún no se guardan
+    const pendientes = productosInventario.filter(e => e.type).length
     return (
         <div className="container-fluid">
 
@@ -103,7 +105,7 @@ export default function InventarioForzado({
                             <input type="date" className="form-control" value={fecha1modalhistoricoproducto} onChange={e=>setfecha1modalhistoricoproducto(e.target.value)}/>
                             <input type="date" className="form-control" value={fecha2modalhistoricoproducto} onChange={e=>setfecha2modalhistoricoproducto(e.target.value)}/>
 
-                            <button className="btn btn-success" onClick={()=>getmovientoinventariounitario()}><i className="fa fa-search"></i></button>
+                            <button className="btn btn-brand" onClick={()=>getmovientoinventariounitario()}><i className="fa fa-search"></i></button>
                         </div>
 
                         <table className="table">
@@ -146,8 +148,8 @@ export default function InventarioForzado({
 
                         {replaceProducto.poreste?
                             <>
-                                <button className="btn btn-outline-success" onClick={()=>setreplaceProducto({...replaceProducto, poreste: null})}> {replaceProducto.poreste}</button>
-                                <button className="btn btn-outline-success btn-sm ms-2" onClick={saveReplaceProducto}><i className="fa fa-paper-plane"></i></button>
+                                <button className="btn btn-outline-brand" onClick={()=>setreplaceProducto({...replaceProducto, poreste: null})}> {replaceProducto.poreste}</button>
+                                <button className="btn btn-outline-brand btn-sm ms-2" onClick={saveReplaceProducto}><i className="fa fa-paper-plane"></i></button>
 
                             </> 
                         :null}
@@ -246,16 +248,14 @@ export default function InventarioForzado({
                                 <option value="desc">Orden Desc</option>
                             </select>
                             <button className="btn btn-warning ms-2" onClick={reporteInventario}>Reporte General <i className="fa fa-print"></i></button>
-                            {user.iscentral?
-                                <button className="btn btn-outline-success" onClick={() => changeInventario(null, null, null, "add")}>Nuevo (f2) <i className="fa fa-plus"></i></button>
-                            :null}
-                            
+                            <button className="btn btn-outline-brand" onClick={() => changeInventario(null, null, null, "add")}>Nuevo (f2) <i className="fa fa-plus"></i></button>
+
                             {busquedaAvanazadaInv?
-                                <button className="btn btn-success" onClick={buscarInvAvanz}><i className="fa fa-search"></i></button>
+                                <button className="btn btn-brand" onClick={buscarInvAvanz}><i className="fa fa-search"></i></button>
                             :null}
-                            {user.iscentral?
-                                <button className="btn btn-success text-light" onClick={guardarNuevoProductoLote}>Guardar (f1)</button>
-                            :null}
+                            <button className={(pendientes?"btn-brand":"btn-outline-brand")+" btn"} onClick={guardarNuevoProductoLote}>
+                                <i className="fa fa-save"></i> Guardar (f1){pendientes?<span className="badge bg-light text-dark ms-1">{pendientes}</span>:null}
+                            </button>
 
                         </div>
                     </div>
@@ -277,7 +277,7 @@ export default function InventarioForzado({
                             <th className="cell1 pointer"><span onClick={() => setInvorderColumn("precio_base")}>Base</span></th>
                             <th className="cell15 pointer">
                                 <span onClick={() => setInvorderColumn("precio")}>Venta </span>
-                                <span className="btn btn-outline-success mr-1 btn-sm" onClick={setSameGanancia}>% general <i className="fa fa-coin"></i></span>
+                                <span className="btn btn-outline-brand mr-1 btn-sm" onClick={setSameGanancia}>% general <i className="fa fa-coin"></i></span>
                             </th>
                             <th className="cell15 pointer" >
                                 <span onClick={() => setInvorderColumn("id_categoria")}>
@@ -327,11 +327,11 @@ export default function InventarioForzado({
                                     <td className="cell2">{e.descripcion}</td>
                                     <th className="cell05">{e.cantidad} <i className="fa fa-eye text-success pointer" onClick={()=>openmodalhistoricoproducto(e.id)}></i>
                                         <div className="btn-group-vertical">
-                                            <span className="btn btn-outline-success btn-sm" 
+                                            <span className="btn btn-outline-brand btn-sm" 
                                             data-id={e.id} 
                                             onClick={setStockMin}>stockMin.{e.stockmin}</span>
 
-                                            <span className="btn btn-outline-success btn-sm" 
+                                            <span className="btn btn-outline-brand btn-sm" 
                                             data-id={e.id} 
                                             onClick={setCtxBulto}>CtxPaquete.{e.bulto}</span>
                                         </div>
@@ -344,12 +344,12 @@ export default function InventarioForzado({
                                     </span>
                                         <br/>
                                         <div className="btn-group w-100">
-                                            <span className="btn btn-outline-success btn-sm" 
+                                            <span className="btn btn-outline-brand btn-sm" 
                                             data-id={e.id} 
                                             data-type="p1" 
                                             onClick={setPrecioAlterno}>P1.<br/>{e.precio1}</span>
 
-                                            <span className="btn btn-outline-success btn-sm" 
+                                            <span className="btn btn-outline-brand btn-sm" 
                                             data-id={e.id} 
                                             data-type="p2" 
                                             onClick={setPrecioAlterno}>P2.<br/>{e.precio2}</span>
@@ -491,8 +491,6 @@ export default function InventarioForzado({
                                     <td className="cell1">
                                         <div className='d-flex justify-content-between'>
 
-                                        {user.iscentral?
-                                        <>
                                             {!e.type ?
                                                 <>
                                                     <span className="btn-sm btn btn-danger" onClick={() => changeInventario(null, i, e.id, "delMode")}><i className="fa fa-trash"></i></span>
@@ -508,8 +506,6 @@ export default function InventarioForzado({
                                             {e.type === "delete" ?
                                                 <span className="btn-sm btn btn-danger" onClick={() => changeInventario(null, i, e.id, "delModeUpdateDelete")}><i className="fa fa-arrow-left"></i></span>
                                                 : null}
-                                        </>
-                                        :null}
 
                                             <span className="btn-sm btn btn-warning" onClick={() => printTickedPrecio(e.id)}><i className="fa fa-print"></i></span>
 
@@ -523,6 +519,13 @@ export default function InventarioForzado({
                     </tbody>
                 </table>
             </form>
-        </div>    
+
+            {pendientes?
+                <div className="barra-guardar">
+                    <span><b>{pendientes}</b> {pendientes==1?"producto con cambios sin guardar":"productos con cambios sin guardar"}</span>
+                    <button className="btn btn-brand" onClick={guardarNuevoProductoLote}><i className="fa fa-save"></i> Guardar cambios (f1)</button>
+                </div>
+            :null}
+        </div>
     )
 }

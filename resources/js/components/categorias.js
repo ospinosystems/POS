@@ -30,7 +30,7 @@ export default function Categorias({
 			<div className="container">
 				<div className="row">
 					<div className="col">
-						<h1>Categorías <button className="btn btn-sm btn-success" onClick={setNuevoCat}>Nuevo</button></h1>
+						<h1>Categorías <button className="btn btn-sm btn-brand" onClick={setNuevoCat}>Nuevo</button></h1>
 
 						<div className="">
 							<div className="input-group ">
@@ -51,7 +51,7 @@ export default function Categorias({
 										onClick={setIndexSelectCatFun}
 										data-index={i}
 										key={e.id}
-										className={(indexSelectCategorias == i ? "bg-sinapsis" : "bg-light text-secondary") + " card mt-2 pointer"}>
+										className={(indexSelectCategorias == i ? "bg-brand" : "bg-light text-secondary") + " card mt-2 pointer"}>
 										<div className="card-header flex-row row justify-content-between">
 											<div>
 												<small>ID.{e.id}</small>
@@ -89,10 +89,10 @@ export default function Categorias({
 							</div>
 							<div className="form-group mt-1">
 								{indexSelectCategorias == null ?
-									<button className="btn btn-outline-success btn-block" type="submit">Guardar</button>
+									<button className="btn btn-outline-brand btn-block" type="submit">Guardar</button>
 									:
 									<div className="btn-group">
-										<button className="btn btn-sinapsis btn-block" type="submit">Editar</button>
+										<button className="btn btn-brand btn-block" type="submit">Editar</button>
 										<button className="btn btn-outline-danger btn-block" onClick={delCategorias} type="button"><i className="fa fa-times"></i></button>
 
 									</div>

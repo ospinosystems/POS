@@ -81,13 +81,13 @@ usuariosData,
 					  <div className="input-group-prepend">
               <div className="input-group-text">
                 <div className="radios d-flex mr-2">
-                  <div className={" m-1 pointer "+(tipobusquedapedido=="fact"?"select-fact bg-sinapsis":"select-fact")} onClick={()=>setTipoBusqueda("fact")}>
+                  <div className={" m-1 pointer "+(tipobusquedapedido=="fact"?"select-fact bg-brand":"select-fact")} onClick={()=>setTipoBusqueda("fact")}>
                     Fact. <i className="fa fa-search"></i>
                   </div>
-                  <div className={" m-1 pointer " + (tipobusquedapedido=="prod"?"select-fact bg-sinapsis":"select-fact")} onClick={()=>setTipoBusqueda("prod")}>
+                  <div className={" m-1 pointer " + (tipobusquedapedido=="prod"?"select-fact bg-brand":"select-fact")} onClick={()=>setTipoBusqueda("prod")}>
                     Prod. <i className="fa fa-search"></i> 
                   </div>
-                  <div className={" m-1 pointer " + (tipobusquedapedido=="cliente"?"select-fact bg-sinapsis":"select-fact")} onClick={()=>setTipoBusqueda("cliente")}>
+                  <div className={" m-1 pointer " + (tipobusquedapedido=="cliente"?"select-fact bg-brand":"select-fact")} onClick={()=>setTipoBusqueda("cliente")}>
                     Clien. <i className="fa fa-user"></i> 
                   </div>
                 </div>
@@ -106,9 +106,9 @@ usuariosData,
 				<div className="d-flex justify-content-between mt-2 mb-2">
 					<div className="input-group cell3">
 	      		<div className="btn-group">
-	      			<button onClick={()=>setshowMisPedido(true)} className={("btn btn-sm btn-outline-")+(!showMisPedido?null:"success")}>Mis pedidos</button>
+	      			<button onClick={()=>setshowMisPedido(true)} className={("btn btn-sm btn-outline-")+(!showMisPedido?null:"brand")}>Mis pedidos</button>
 					{auth(1)?
-	      				<button onClick={()=>setshowMisPedido(false)} className={("btn btn-sm btn-outline-")+(showMisPedido?null:"success")}>Todos los pedidos</button>
+	      				<button onClick={()=>setshowMisPedido(false)} className={("btn btn-sm btn-outline-")+(showMisPedido?null:"brand")}>Todos los pedidos</button>
 					:null}
 	      		</div>
 	      	</div>
@@ -131,7 +131,7 @@ usuariosData,
 									<div className="card-pedidos d-flex justify-content-between" key={e.id}>
 									  <div className="">
 										  <h1>
-										  	<span className="badge btn-sinapsis">
+										  	<span className="badge btn-brand">
 										  		{e.cantidadtotal}
 										  	</span>
 										  </h1>
@@ -166,10 +166,10 @@ usuariosData,
 									
 							<div className="p-0 card-pedidos-header d-flex justify-content-between align-items-center">
 									<div className="cell1">
-                    <span className="badge btn-sinapsis fs-2 pointer" data-valor="id" onClick={clickSetOrderColumnPedidos}>
+                    <span className="badge btn-brand fs-2 pointer" data-valor="id" onClick={clickSetOrderColumnPedidos}>
                     {pedidos["fact"]?pedidos["fact"].length:null}
                     </span>
-              			{orderbycolumpedidos=="id"?(<i className={(orderbyorderpedidos=="desc"?"fa fa-arrow-up":"fa fa-arrow-down")+" text-sinapsis"}></i>):null}
+              			{orderbycolumpedidos=="id"?(<i className={(orderbyorderpedidos=="desc"?"fa fa-arrow-up":"fa fa-arrow-down")+" text-brand"}></i>):null}
 
 									</div>
 
@@ -181,7 +181,7 @@ usuariosData,
 							</div>
 							{pedidos["fact"]?pedidos["fact"].map(e=>
 								e?
-									<div className={("card-pedidos ")+(e.estado?"":"bg-sinapsis-light")} key={e.id}>
+									<div className={("card-pedidos ")+(e.estado?"":"bg-brand-light")} key={e.id}>
 											
 										<div className="cell1 pointer"/*  data-id={e.id} onClick={onClickEditPedido} */>
 											
@@ -230,7 +230,7 @@ usuariosData,
 						    						:null}
 
 						    						{ee.monto!=0&&ee.tipo==4?
-						    							<span className="btn btn-sinapsis btn-sm">Cred. {ee.monto}</span>
+						    							<span className="btn btn-brand btn-sm">Cred. {ee.monto}</span>
 						    						:null}
 
 						    						{ee.monto!=0&&ee.tipo==5?
@@ -260,8 +260,8 @@ usuariosData,
 											    	</td>
 											    	<td className="cell3">
 															<div className="btn-options btn-group">
-																<button className="btn btn-outline-success btn-sm" data-id={e.id} onClick={getPedidoFast}><i className="fa fa-eye"></i></button>
-																<button className="btn btn-outline-sinapsis btn-sm" onClick={() => toggleImprimirTicket(e.id)}><i className="fa fa-print"></i></button>
+																<button className="btn btn-outline-brand btn-sm" data-id={e.id} onClick={getPedidoFast}><i className="fa fa-eye"></i></button>
+																<button className="btn btn-outline-brand btn-sm" onClick={() => toggleImprimirTicket(e.id)}><i className="fa fa-print"></i></button>
 																<button className="btn btn-outline-danger btn-sm" data-id={e.id} data-type="getPedidos" onClick={onCLickDelPedido}><i className="fa fa-times"></i></button>
 															</div>
 											    	</td>

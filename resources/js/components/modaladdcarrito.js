@@ -32,7 +32,7 @@ export default function ModalAddCarrito({
             <div>
               <div className="text-success fs-2 fw-bold lh-1">{moneda(producto.precio)}</div>
               {producto.bulto?
-                <span className="btn btn-sm btn-outline-success mt-1" onClick={()=>setbultocarrito(producto.bulto)}>
+                <span className="btn btn-sm btn-outline-brand mt-1" onClick={()=>setbultocarrito(producto.bulto)}>
                   Bulto x{producto.bulto}
                 </span>
               :null}
@@ -87,10 +87,10 @@ export default function ModalAddCarrito({
             </div>
 
             <div className="d-flex mt-3">
-              <button className="btn btn-sinapsis agregar_carrito flex-grow-1 me-1" type="button" onClick={addCarritoRequest} data-type="agregar">
+              <button className="btn btn-brand agregar_carrito flex-grow-1 me-1" type="button" onClick={addCarritoRequest} data-type="agregar">
                 Agregar <small>(enter)</small>
               </button>
-              <button className="btn btn-outline-success flex-grow-1 me-1" type="button" onClick={addCarritoRequest} data-type="agregar_procesar">
+              <button className="btn btn-outline-brand flex-grow-1 me-1" type="button" onClick={addCarritoRequest} data-type="agregar_procesar">
                 Procesar <small>(TAB)</small>
               </button>
               <button className="btn btn-outline-secondary" type="button" onClick={setPresupuesto} data-id={producto.id}>

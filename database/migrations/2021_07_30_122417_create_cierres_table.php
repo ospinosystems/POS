@@ -109,7 +109,9 @@ class CreateCierresTable extends Migration
                 "puntodeventa_actual_bs" =>0,
                 "tasa" =>0,
                 "nota" =>0,
-                "fecha" =>"2023-01-01",
+                // Ayer: el POS rechaza operar si el último cierre tiene más de 15 días
+                // (PedidosController::today) y bloquea pedidos si el cierre es de hoy.
+                "fecha" =>date("Y-m-d", strtotime("-1 day")),
                 "id_usuario" =>1,
                 "numventas" =>0,
                 "precio" =>0,

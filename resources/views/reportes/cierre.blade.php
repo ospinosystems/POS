@@ -104,11 +104,6 @@
 				</tr>
 				<tr>
 					<td>
-						@if (isset($message))
-							<img src="{{$message->embed('images/logo-small.jpg')}}" width="200px" >
-						@else
-							<img src="{{asset('images/logo-small.jpg')}}" width="200px" >
-						@endif
 						
 
 						<h5>{{$sucursal->nombre_registro}}</h5>

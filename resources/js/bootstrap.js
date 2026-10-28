@@ -22,10 +22,10 @@ window.Echo = new Echo({
     broadcaster: "pusher",
     key: process.env.MIX_PUSHER_APP_KEY,
     //cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-    wsHost: "titanio.lat",
+    wsHost: process.env.MIX_PUSHER_HOST,
     wsPort: 6001, 
     
-    wssHost: "titanio.lat",
+    wssHost: process.env.MIX_PUSHER_HOST,
     wssPort: 6001,
      
     forceTLS: true,

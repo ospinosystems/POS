@@ -36,16 +36,12 @@ class sendCentral extends Controller
 
     public function path()
     {
-        return "http://127.0.0.1:8001";
-        
+        return config("pos.central_url");
     }
 
     public function sends()
     {
-        return [
-              
-            "alvaroospino79@gmail.com"        
-        ];
+        return config("pos.correos_cierre");
     }
     public function setSocketUrlDB()
     {

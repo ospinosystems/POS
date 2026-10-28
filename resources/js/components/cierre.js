@@ -118,9 +118,9 @@ function Cierre({
 						<div className="row">
 							<div className="col">
 								<div className="btn-group mb-1">
-									<button className={(viewCierre=="cuadre"?"btn-":"btn-outline-")+("sinapsis btn")} onClick={()=>setViewCierre("cuadre")}>Cuadre</button>
+									<button className={(viewCierre=="cuadre"?"btn-":"btn-outline-")+("brand btn")} onClick={()=>setViewCierre("cuadre")}>Cuadre</button>
 									
-									<button className={(viewCierre=="historico"?"btn-":"btn-outline-")+("sinapsis btn")} onClick={()=>setViewCierre("historico")}>Histórico</button>
+									<button className={(viewCierre=="historico"?"btn-":"btn-outline-")+("brand btn")} onClick={()=>setViewCierre("historico")}>Histórico</button>
 									
 								</div>
 								<br />
@@ -131,7 +131,7 @@ function Cierre({
 						{viewCierre=="cuadre"?
 						<>
 							<div className="input-group">
-								<button className="btn btn-sinapsis" onClick={cerrar_dia}><i className="fa fa-cogs"></i></button>
+								<button className="btn btn-brand" onClick={cerrar_dia}><i className="fa fa-cogs"></i></button>
 
 								<input type="date" disabled={true} value={fechaCierre} className="form-control" onChange={null}/>
 							</div>
@@ -141,11 +141,11 @@ function Cierre({
 									<div className='btn-group mt-2 mb-2 w-30'>
 		
 										{tipo_accionCierre=="guardar"?
-										<button className="btn-sm btn btn-outline-success" onClick={guardar_cierre} type="button">Guardar</button>
+										<button className="btn-sm btn btn-outline-brand" onClick={guardar_cierre} type="button">Guardar</button>
 										:
 											<button className="btn-sm btn btn-warning" onClick={guardar_cierre} type="button">Editar</button>
 										}
-										<button className="btn-sm btn btn-sinapsis" onClick={veryenviarcierrefun} type="button" data-type="ver">Ver</button>
+										<button className="btn-sm btn btn-brand" onClick={veryenviarcierrefun} type="button" data-type="ver">Ver</button>
 
 										
 										<button className="btn btn-sm" onClick={()=>setToggleDetallesCierre(!toggleDetallesCierre)}>Ver detalles</button>
@@ -155,7 +155,7 @@ function Cierre({
 										<div className='btn-group mt-2 mb-2'>
 
 											{auth(1)?
-											<button className={"btn "+(totalizarcierre?"btn-success":"")+" btn-lg"} onClick={()=>getTotalizarCierre()}>Totalizar</button>
+											<button className={"btn "+(totalizarcierre?"btn-brand":"")+" btn-lg"} onClick={()=>getTotalizarCierre()}>Totalizar</button>
 											
 											:null}
 
@@ -412,7 +412,7 @@ function Cierre({
 								</form>
 
 								:<div className="d-flex justify-content-center align-items-center">
-									<button className="btn btn-xl btn-success" onClick={cerrar_dia}>¡Cerremos el día!</button>
+									<button className="btn btn-xl btn-brand" onClick={cerrar_dia}>¡Cerremos el día!</button>
 								</div>}
 						</>
 						:null}	

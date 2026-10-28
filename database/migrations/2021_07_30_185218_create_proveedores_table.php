@@ -27,9 +27,9 @@ class CreateProveedoresTable extends Migration
         });
         DB::table("proveedores")->insert([
             [
-                "descripcion"=>"Titanio",
-                "rif"=>"21628222-8",
-                "direccion"=>"San Fernando",
+                "descripcion"=>"PROVEEDOR GENERAL",
+                "rif"=>"J-00000000-0",
+                "direccion"=>"N/A",
                 "telefono"=>"0",
             ],
         ]);

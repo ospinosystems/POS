@@ -65,7 +65,7 @@ setclienteInpciudad
     <div className="container">
       <div className="row">
         <div className="col">
-          <h1>Administrar Clientes <button className="btn btn-sm btn-success" onClick={setNuevoCliente}>Nuevo</button></h1> 
+          <h1>Administrar Clientes <button className="btn btn-sm btn-brand" onClick={setNuevoCliente}>Nuevo</button></h1> 
         </div>
       </div> 
       <div className="row">
@@ -88,7 +88,7 @@ setclienteInpciudad
                 onClick={setindexSelectClienteFun} 
                 data-index={i}
                 key={e.id}
-                className={(indexSelectCliente==i?"bg-sinapsis":"bg-light text-secondary")+" card mt-2 pointer"}>
+                className={(indexSelectCliente==i?"bg-brand":"bg-light text-secondary")+" card mt-2 pointer"}>
                   <div className="card-header flex-row row justify-content-between">
                     <div>
                       <small>ID.{e.id}</small>
@@ -191,10 +191,10 @@ setclienteInpciudad
             <div className="row">
               <div className="col text-center">
                 {indexSelectCliente==null?
-                  <button className="btn btn-outline-success btn-block" type="submit">Guardar</button>
+                  <button className="btn btn-outline-brand btn-block" type="submit">Guardar</button>
                 :
                   <div className="btn-group">
-                    <button className="btn btn-sinapsis btn-block" type="submit">Editar</button>
+                    <button className="btn btn-brand btn-block" type="submit">Editar</button>
                     <button className="btn btn-outline-danger btn-block" onClick={delCliente} type="button"><i className="fa fa-times"></i></button>
                   </div>
                 }

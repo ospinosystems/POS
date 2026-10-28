@@ -33,27 +33,27 @@ function ProductosList({
       <table className={"tabla-facturacion table table-striped text-center"+(buscandoProductos?" cargando-lista":"")}>
         <thead>
           <tr>
-            <th className="text-sinapsis cell15 pointer" 
+            <th className="text-brand cell15 pointer" 
             data-valor="codigo_proveedor" 
             onClick={clickSetOrderColumn}>Cod. 
               {orderColumn=="codigo_proveedor"?(<i className={orderBy=="desc"?"fa fa-arrow-up":"fa fa-arrow-down"}></i>):null}
             </th>
-            <th className="text-sinapsis cell4 pointer" 
+            <th className="text-brand cell4 pointer" 
             data-valor="descripcion" 
             onClick={clickSetOrderColumn}>Desc. 
               {orderColumn=="descripcion"?(<i className={orderBy=="desc"?"fa fa-arrow-up":"fa fa-arrow-down"}></i>):null}
             </th>
-            <th className="text-sinapsis cell1 pointer" 
+            <th className="text-brand cell1 pointer" 
             data-valor="cantidad" 
             onClick={clickSetOrderColumn}>Disp. 
               {orderColumn=="cantidad"?(<i className={orderBy=="desc"?"fa fa-arrow-up":"fa fa-arrow-down"}></i>):null}
             </th>
-            <th className="text-sinapsis cell05 pointer" 
+            <th className="text-brand cell05 pointer" 
             data-valor="unidad" 
             onClick={clickSetOrderColumn}>Unidad 
               {orderColumn=="unidad"?(<i className={orderBy=="desc"?"fa fa-arrow-up":"fa fa-arrow-down"}></i>):null}
             </th>
-            <th className="text-sinapsis cell3 pointer" 
+            <th className="text-brand cell3 pointer" 
             data-valor="precio" 
             onClick={clickSetOrderColumn}>Precio 
               {orderColumn=="precio"?(<i className={orderBy=="desc"?"fa fa-arrow-up":"fa fa-arrow-down"}></i>):null}
@@ -64,7 +64,7 @@ function ProductosList({
           {buscandoProductos&&(!productos||!productos.length)?filasSkeleton:null}
           {productos?productos.length?productos.map((e,i)=>
             
-              <tr data-index={i} tabIndex="-1" className={(counterListProductos == i ?"bg-sinapsis-light":null)+(' tr-producto hover')} key={e.id}>
+              <tr data-index={i} tabIndex="-1" className={(counterListProductos == i ?"bg-brand-light":null)+(' tr-producto hover')} key={e.id}>
                 <td data-index={i} onClick={event=>{
                   if(!e.lotes.length)return addCarrito(event)
                   }} className="pointer align-middle cell15 cod-producto">{e.codigo_barras}</td>
@@ -84,7 +84,7 @@ function ProductosList({
                           key={ee.id}>
                           
                           <td>Lote.{ee.lote}</td>
-                          <td><span className="btn btn-sm btn-outline-success w-100">Ct. {ee.cantidad}</span></td>
+                          <td><span className="btn btn-sm btn-outline-brand w-100">Ct. {ee.cantidad}</span></td>
                           <td>Exp.{ee.vence}</td>
                         </tr>) : null}
                           </tbody>
@@ -93,10 +93,10 @@ function ProductosList({
                 </td>
                 <td className="align-middle cell1">
                 {auth(1)?
-                  <button /* onClick={selectProductoFast} */ data-id={e.id} data-val={e.codigo_barras} className='formShowProductos btn btn-sinapsis btn-sm btn-disp'>
+                  <button /* onClick={selectProductoFast} */ data-id={e.id} data-val={e.codigo_barras} className='formShowProductos btn btn-brand btn-sm btn-disp'>
                   {e.lotes.length?e.lotes_ct:e.cantidad.replace(".00","")}
                     </button>         
-                  : <button className='formShowProductos btn btn-sinapsis btn-sm btn-disp'>
+                  : <button className='formShowProductos btn btn-brand btn-sm btn-disp'>
                     {e.lotes.length ? e.lotes_ct : e.cantidad.replace(".00", "")}
                   </button>}
                 </td>
@@ -106,7 +106,7 @@ function ProductosList({
                     <div className="row">
                       <div className="col-5 m-0 p-0">
                         <div className='btn-group w-100 h-100'>
-                            <button type="button" className='m-0 btn-sm btn btn-success text-light fs-4 fw-bold'>
+                            <button type="button" className='m-0 btn-sm btn btn-brand text-light fs-4 fw-bold'>
                             {moneda(e.precio)}
                             </button>
                         </div>
@@ -121,7 +121,7 @@ function ProductosList({
                     </div>
                     {e.precio1?<div className="row">
                       <div className="col m-0 p-0">
-                        <span className="btn btn-success w-100 fst-bold text-light">
+                        <span className="btn btn-brand w-100 fst-bold text-light">
                           MAYOR. 1 x <b>{e.bulto}</b> = {moneda(e.precio1*e.bulto)} <br/>
                           P/U. {moneda(e.precio1)}
                         </span>
@@ -142,7 +142,7 @@ function ProductosList({
             <div 
             key={e.id}
             data-index={i} onClick={addCarrito}
-            className={(false?"bg-sinapsis-light":"bg-light")+" text-secondary card mb-3 pointer shadow"}>
+            className={(false?"bg-brand-light":"bg-light")+" text-secondary card mb-3 pointer shadow"}>
               <div className="card-header flex-row justify-content-between">
                 <div className="d-flex justify-content-between">
                   <div className="w-50">

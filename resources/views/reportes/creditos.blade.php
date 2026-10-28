@@ -88,11 +88,6 @@
 			<tbody>
 				<tr>
 					<td colspan="3">
-						@if (isset($message))
-							<img src="{{$message->embed('images/logo-small.jpg')}}" width="200px" >
-						@else
-							<img src="{{asset('images/logo-small.jpg')}}" width="200px" >
-						@endif
 						
 
 						

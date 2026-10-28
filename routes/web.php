@@ -37,11 +37,10 @@ use App\Http\Controllers\MovimientosInventariounitarioController;
 Route::get('getip', [sendCentral::class,"getip"]);
 Route::get('/update', function () {
     return '
-		c:\\xampp\mysql\bin\mysql -u root -p sinapsis --binary-mode o < sinapsisData.sql <br/>
 		git stash <br/>
-		c:\\xampp\mysql\bin\mysqldump -u root -p --no-create-db --no-create-info --complete-insert --extended-insert sinapsis > sinapsisData.sql <br/>
-		git stash <br/>
-		git pull https://github.com/alvaritojose2712/ventas.git <br/>
+		git pull <br/>
+		composer install --no-dev --optimize-autoloader <br/>
+		php artisan migrate --force <br/>
 		php artisan optimize <br/>
 		php artisan optimize:clear <br/>
 	';
