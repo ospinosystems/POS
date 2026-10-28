@@ -13,7 +13,7 @@ Nació como copia de `supermercado`, sin logo, sin marca y con un color neutro.
 ## Instalación en un servidor nuevo
 
 ```bash
-git clone https://github.com/alvaritojose2712/POS.git
+git clone https://github.com/ospinosystems/POS.git
 cd POS
 composer install --no-dev --optimize-autoloader
 cp .env.example .env
